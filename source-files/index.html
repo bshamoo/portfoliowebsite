@@ -53,6 +53,7 @@
             </div>
         </header>
         <main>
+        <!-- HOME START -->
             <section data-index="0" class="section" id="HOME">
                 <div class="container-fluid d-flex align-items-center justify-content-center text-center">
                     <div class="row d-flex align-items-center justify-content-center text-center">
@@ -74,6 +75,9 @@
                     </div>
                 </div>
             </section>
+        <!-- HOME END -->
+
+        <!-- ABOUT START -->
             <section data-index="1" class="section" id="ABOUT">
                 <div class="container-fluid d-flex align-items-center justify-content-center text-center">
                     <div class="row">
@@ -86,6 +90,9 @@
                     </div>
                 </div>
             </section>
+        <!-- ABOUT END -->
+
+        <!-- WORK START -->
             <section data-index="2" class="section" id="WORK">
                 <div class="container-fluid d-flex flex-column align-items-center justify-content-center text-center">
                     <div class="row">
@@ -94,62 +101,151 @@
                             <div class="title-line"></div>
                         </div>
                     </div>
-                    <!-- Card deck -->
-                <div class="card-deck h-50">
-
-                    <!-- Card -->
-                    <div class="card card-image"
-                        style="background-color: #181818;">
-
+                    <!-- Card deck start-->
+                <div class="card-deck h-50 w-75">
+                    <!-- Card 1 -->
+                    <div class="card apps mx-4 mb-5">
                         <!-- Content -->
-                        <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
-                        <div>
-                            <h3 class="pink-text"><i class="fas fa-mobile"></i> APPS</h3>
-                            <a class="btn btn-pink"><i class="fas fa-clone left"></i> VIEW PROJECTS</a>
-                        </div>
+                        <img class="card-img-top " src="css/foodscan.PNG" alt="Food Scan Background">
+                        <div class="card-img-overlay">
+                            <div class="text-center d-flex align-items-center justify-content-center">
+                                <div>
+                                    <a class="btn stretched-link" data-toggle="modal" data-target="#modalAPPS">
+                                        <h3 class="card-title"><i class="fas fa-mobile"></i> APPS</h3>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <!-- Card -->
-    
-                    <!-- Card -->
-                    <div class="card card-image"
-                        style="background-color: #181818;">
-
+                    <!-- Card 2 -->
+                    <div class="card games mx-4 mt-5">
                         <!-- Content -->
-                        <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
-                        <div>
-                            <h3 class="pink-text"><i class="fas fa-gamepad"></i></i> GAMES</h3>
-                            <a class="btn btn-pink"><i class="fas fa-clone left"></i> VIEW PROJECTS</a>
-                        </div>
+                        <img class="card-img-top" src="css/cubegame.PNG" alt="Cube Game Background">
+                        <div class="card-img-overlay">
+                            <div class="text-center d-flex align-items-center justify-content-center">
+                                <div>
+                                    <a class="btn stretched-link" data-toggle="modal" data-target="#modalGAMES">
+                                        <h3 class="card-title"><i class="fas fa-gamepad"></i></i> GAMES</h3>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <!-- Card -->
-                    <div class="card card-image"
-                        style="background-color: #181818;">
-
+                    <!-- Card 3 --> 
+                    <div class="card music mx-4 mb-5">
                         <!-- Content -->
-                        <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
-                        <div>
-                            <h3 class="pink-text"><i class="fas fa-compact-disc"></i> MUSIC</h3>
-                            <a class="btn btn-pink"><i class="fas fa-clone left"></i> VIEW PROJECTS</a>
-                        </div>
+                        <img class="card-img-top" src="css/musicartwork.svg" alt="Music Artwork Background">
+                        <div class="card-img-overlay">
+                            <div class="text-center d-flex align-items-center justify-content-center">
+                                <div>
+                                    <a class="btn stretched-link" data-toggle="modal" data-target="#modalMUSIC">
+                                        <h3 class="card-title"><i class="fas fa-compact-disc"></i> MUSIC</h3>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <!-- Card -->
-                    <div class="card card-image"
-                        style="background-color: #181818;">
-
+                    <!-- Card 4 -->
+                    <div class="card startups mx-4 mt-5">
                         <!-- Content -->
-                        <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
-                        <div>
-                            <h3 class="pink-text pt-2"><i class="fas fa-rocket"></i> STARTUPS</h3>
-                            <a class="btn btn-pink"><i class="fas fa-clone left"></i> VIEW PROJECTS</a>
-                        </div>
+                        <img class="card-img-top" src="css/MSstartup.svg" alt="Startup Background">
+                        <div class="card-img-overlay">
+                            <div class="text-center d-flex align-items-center justify-content-center">
+                                <div>
+                                    <a class="btn stretched-link" data-toggle="modal" data-target="#modalSTARTUPS">
+                                        <h3 class="card-title"><i class="fas fa-rocket"></i> STARTUPS</h3>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- Card deck -->
+                <!-- Card deck end-->
+
+                <!-- APPS Modal Start -->
+                <div class="modal fade" id="modalAPPS" tabindex="-1" role="dialog" aria-labelledby="modalAPPSLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <!--Content-->
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <h2>APPS</h2>
+                                <div class="modal-title-line"></div>
+                                <div class="px-5 pb-5">
+                                    <p>Module currently under construction</p>
+                                </div>
+                            </div>
+                            <div class="modal-footer justify-content-center">
+                                <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                <!-- APPS Modal End -->
+
+                <!-- GAMES Modal Start -->
+                <div class="modal fade" id="modalGAMES" tabindex="-1" role="dialog" aria-labelledby="modalGAMESLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <!--Content-->
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <h2>GAMES</h2>
+                                <div class="modal-title-line"></div>
+                                <div class="px-5 pb-5">
+                                    <p>Module currently under construction</p>
+                                </div>
+                            </div>
+                            <div class="modal-footer justify-content-center">
+                                <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- GAMES Modal End -->
+
+                <!-- MUSIC Modal Start -->
+                <div class="modal fade" id="modalMUSIC" tabindex="-1" role="dialog" aria-labelledby="modalMUSICLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <!--Content-->
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <h2>MUSIC</h2>
+                                <div class="modal-title-line"></div>
+                                <div class="px-5 pb-5">
+                                    <p>Module currently under construction</p>
+                                </div>
+                            </div>
+                            <div class="modal-footer justify-content-center">
+                                <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- MUSIC Modal End -->
+
+                <!-- STARTUPS Modal Start -->
+                <div class="modal fade" id="modalSTARTUPS" tabindex="-1" role="dialog" aria-labelledby="modalSTARTUPSLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <!--Content-->
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <h2>STARTUPS</h2>
+                                <div class="modal-title-line"></div>
+                                <div class="px-5 pb-5">
+                                    <p>Module currently under construction</p>
+                                </div>
+                            </div>
+                            <div class="modal-footer justify-content-center">
+                                <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- STARTUPS Modal End -->
+
             </section>
+        <!-- WORK END -->
+
+        <!-- RESUME START -->
             <section data-index="3" class="section" id="RESUME">
                 <div class="container-fluid d-flex flex-column align-items-center justify-content-center text-center">
                     <div class="row">
@@ -166,6 +262,9 @@
                     </div>
                 </div>
             </section>
+        <!-- RESUME END -->
+
+        <!-- CONTACT START -->
             <section data-index="4" class="section" id="CONTACT">
                 <div class="container-fluid d-flex flex-column align-items-center justify-content-center text-center">
                     <div class="row">
@@ -175,42 +274,43 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col">
+                        <div class="col px-5 mx-5">
                             <div class="phone">
                                 <i class="fas fa-phone-alt" style="color: #FEFEFE"></i>
                                 <h6>1-949-355-3137</h6>
                             </div>
                         </div>
-                        <div class="col">
+                        <div class="col px-5 mx-5">
                             <div class="email">
                                 <i class="fas fa-envelope" style="color: #FEFEFE"></i>
-                                <h6>bshamoo@icloud.com</h6>
+                                <h6><a href="mailto:bshamoo@icloud.com">bshamoo@icloud.com</a></h6>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col">
+                        <div class="col mx-3">
                             <a href="https://music.apple.com/profile/shamuson" target="_blank">
                                 <i class="btn fab fa-itunes-note" style="color: #FEFEFE"></i>
                             </a>
                         </div>
-                        <div class="col">
+                        <div class="col mx-3">
                             <a href="https://linkedin.com/in/brandonshamoo" target="_blank">
                                 <i class="btn fab fa-linkedin-in" style="color: #FEFEFE"></i>
                             </a>
                         </div>
-                        <div class="col">
+                        <div class="col mx-3">
                             <a href="https://github.com/bshamoo" target="_blank">
                                 <i class="btn fab fa-github" style="color: #FEFEFE"></i>
                             </a>
                         </div>
-                        <div class="col">
+                        <div class="col mx-3">
                             <a href="https://www.facebook.com/brandon.shamoo.3/" target="_blank">
                                 <i class="btn fab fa-facebook" style="color: #FEFEFE"></i>
                             </a>
                         </div>
                     </div>
             </section>
+        <!-- CONTACT END -->
         </main>
         <div id="left"></div>
         <div id="right"></div>
