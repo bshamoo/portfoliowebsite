@@ -4,8 +4,9 @@
     box-sizing: border-box;
 }
 
+
 #top, #bottom, #left, #right {
-	background-image: linear-gradient(0deg, rgba(22, 22, 22, 0.95), rgba(22, 22, 22, 0.95)), url('SplashBackgroundInverted.png');
+	background-image: linear-gradient(0deg, rgba(22, 22, 22, 0.90), rgba(22, 22, 22, 0.90)), url('SplashBackgroundInverted.png');
     background-repeat: no-repeat, no-repeat;
     background-position: center, right top;
 	background-attachment: fixed, fixed;
@@ -13,7 +14,7 @@
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-	position: fixed;
+    position: fixed;
 	}
 	#left, #right {
 		top: 0; bottom: 0;
@@ -53,6 +54,10 @@ html, body {
     justify-content: center;
 }
 
+header li{
+    list-style: none;
+}
+
 header a{
     font-family: 'Roboto', sans-serif;
     font-size: 1.3rem;
@@ -82,25 +87,26 @@ header .nav-item{
 }
 
 header .navbar-brand{
-    margin-left: 2.8em;
+    margin-left: 3.5em;
 }
 
-#top-menu li.active a.about, header .about:hover{
+#top-menu li.active #about, header .about:hover{
     color: #AD396B;
     transform: translateY(-1px);
 }
 
-#top-menu li.active a.work, header .work:hover{
+#top-menu li.active #work, header .work:hover{
     color: #B239EE;
     transform: translateY(-1px);
 }
 
-#top-menu li.active a.resume, header .resume:hover{
-    color: #39EEA2;
+#top-menu li.active #resume, header .resume:hover{
+    color: #53e0b1;
     transform: translateY(-1px);
+
 }
 
-#top-menu li.active a.contact, header .contact:hover{
+#top-menu li.active #contact, header .contact:hover{
     color: #39AFEE;
     transform: translateY(-1px);
 }
@@ -122,12 +128,27 @@ section{
     color: #FEFEFE;
     min-height: 100vh;
     display: flex;
+    background-color: rgb(41, 41, 41);
+    font-style: normal;
+    margin: 10px;
+}
+
+section .title-line {
+    height: 5px;
+    width: 60px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 12px;
+}
+
+#HOME {
+    margin-top: 0px;
 }
 
 
 #HOME h1{
     font-weight: 900;
-    font-style: normal;
     font-size: 80px;
 }
 
@@ -165,20 +186,13 @@ section{
 }
 
 #HOME .title-line {
-    height: 4px;
-    width: 60px;
     background-color: #EE7639;
-    text-align: center;
-    margin: auto;
-    margin-bottom: 20px;
-    margin-top: 12px;
 }
 
 #HOME .btn-orange {
     color:  #FEFEFE;
     background-color: #EE7639;
     font-weight: 400;
-    font-style: normal;
     font-size: 30px;
 }
 
@@ -198,29 +212,17 @@ section{
     background-color: #fc7735;
 }
 
-#ABOUT{
-    display: flex;
-    min-height: 100vh;
-}
-
 #ABOUT h1 {
     font-weight: 700;
-    font-style: normal;
     font-size: 64px;
 }
 
 #ABOUT .title-line {
-    height: 5px;
-    width: 60px;
     background-color: #AD396B;
-    text-align: center;
-    margin: auto;
-    margin-bottom: 20px;
-    margin-top: 10px;
 }
 
 #ABOUT img {
-    margin-top: -20px;
+    margin-top: -30px;
     clip-path: circle(98% at 50% 0%);
 }
 
@@ -230,25 +232,13 @@ section{
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-#WORK{
-    display: flex;
-    min-height: 100vh;
-}
-
 #WORK h1 {
     font-weight: 700;
-    font-style: normal;
     font-size: 64px;
 }
 
 #WORK .title-line {
-    height: 5px;
-    width: 60px;
     background-color: #b239ee;
-    text-align: center;
-    margin: auto;
-    margin-bottom: 45px;
-    margin-top: 10px;
 }
 
 #WORK h3 {
@@ -274,11 +264,11 @@ section{
 }
 
 #WORK .card-img-overlay{
-    background-image: linear-gradient(135deg, rgba(22, 22, 22, 0.60), rgba(22, 22, 22, 0.60));
+    background-image: linear-gradient(135deg, rgba(22, 22, 22, 0.8), rgba(22, 22, 22, 0.8));
 }
 
 #WORK .card-img-overlay:hover{
-    background-image: linear-gradient(135deg, rgba(22, 22, 22, 0.80), rgba(22, 22, 22, 0.80));
+    background-image: linear-gradient(135deg, rgba(22, 22, 22, 0.1), rgba(22, 22, 22, 0.1));
     color: #b239ee;
 }
 
@@ -315,7 +305,6 @@ section{
     color: #FEFEFE;
 }
 
-
 #WORK .modal-body .modal-title-line {
     height: 5px;
     width: 60px;
@@ -327,32 +316,19 @@ section{
 }
 
 
-#RESUME{
-    display: flex;
-    min-height: 100vh;
-}
-
 #RESUME h1 {
     font-weight: 700;
-    font-style: normal;
     font-size: 64px;
 }
 
 #RESUME .title-line {
-    height: 5px;
-    width: 60px;
-    background-color: #39EEA2;
-    text-align: center;
-    margin: auto;
-    margin-bottom: 20px;
-    margin-top: 10px;
+    background-color: #53e0b1;
 }
 
 #RESUME .btn-green {
     color:  #FEFEFE;
-    background-color: #31ca8a;
+    background-color: #53e0b1;
     font-weight: 400;
-    font-style: normal;
     font-size: 30px;
     margin-top: 25px;
 }
@@ -370,28 +346,17 @@ section{
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     color:  #ffffff;
-    background-color: #39f3a6;
-}
-
-#CONTACT{
-    display: flex;
-    min-height: 100vh;
+    /*background-color: #39f3a6;*/
+    background-color: #59f0be;
 }
 
 #CONTACT h1 {
     font-weight: 700;
-    font-style: normal;
     font-size: 64px;
 }
 
 #CONTACT .title-line {
-    height: 5px;
-    width: 60px;
     background-color: #39AFEE;
-    text-align: center;
-    margin: auto;
-    margin-bottom: 20px;
-    margin-top: 10px;
 }
 
 #CONTACT i {
@@ -431,7 +396,6 @@ section{
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
-
 
 footer {
     position: fixed;

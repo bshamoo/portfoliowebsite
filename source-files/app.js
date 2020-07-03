@@ -1,30 +1,7 @@
-$(document).ready(function(){       
-    var scroll_pos = 0;
-    $("#square").css('background-color', '#EE7639');
-    $(document).scroll(function() {
-        scroll_pos = $(this).scrollTop();
-        if(scroll_pos >= 900 && scroll_pos < 1900) {
-            $("#square").css('background-color', '#AD396B');
-        }
-        else if(scroll_pos >= 1900 && scroll_pos < 2800) {
-            $("#square").css('background-color', '#B239EE');
-        } 
-        else if(scroll_pos >= 2800 && scroll_pos < 3700) {
-            $("#square").css('background-color', '#39EEA2');
-        } 
-        else if(scroll_pos >= 3700) {
-            $("#square").css('background-color', '#39AFEE');
-        } 
-        else {
-            $("#square").css('background-color', '#EE7639');
-        }
-    });
-});
-
 // Cache selectors
 var lastId,
     topMenu = $("#top-menu"),
-    topMenuHeight = topMenu.outerHeight()+100,
+    topMenuHeight = topMenu.outerHeight()+15,
     // All list items
     menuItems = topMenu.find("a"),
     // Anchors corresponding to menu items
@@ -33,16 +10,6 @@ var lastId,
       if (item.length) { return item; }
     });
 
-// Bind click handler to menu items
-// so we can get a fancy scroll animation
-menuItems.click(function(e){
-  var href = $(this).attr("href"),
-      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
-  $('html, body').stop().animate({ 
-      scrollTop: offsetTop
-  }, 300);
-  e.preventDefault();
-});
 
 // Bind to scroll
 $(window).scroll(function(){
@@ -64,5 +31,28 @@ $(window).scroll(function(){
        menuItems
          .parent().removeClass("active")
          .end().filter("[href='#"+id+"']").parent().addClass("active");
-   }                   
+   }
+   
+});
+
+// Square Color Change Bind Based on Active Class
+$(document).ready(function() {
+    $("#square").css('background-color', '#EE7639');
+    $(window).scroll(function(){     
+        if ($('li.nav-home').hasClass('active')) {
+            $("#square").css('background-color', '#EE7639');
+        }
+        if($('li.nav-about').hasClass('active')) {
+            $("#square").css('background-color', '#AD396B');
+        }
+        else if($('li.nav-work').hasClass('active')) {
+            $("#square").css('background-color', '#B239EE');
+        }
+        else if($('li.nav-resume').hasClass('active')) {
+            $("#square").css('background-color', '#53e0b1');
+        }
+        else if($('li.nav-contact').hasClass('active')) {
+            $("#square").css('background-color', '#39AFEE');
+        }
+    });
 });
