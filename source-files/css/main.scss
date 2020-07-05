@@ -4,17 +4,19 @@
     box-sizing: border-box;
 }
 
-
 #top, #bottom, #left, #right {
-	background-image: linear-gradient(0deg, rgba(22, 22, 22, 0.90), rgba(22, 22, 22, 0.90)), url('SplashBackgroundInverted.png');
     background-repeat: no-repeat, no-repeat;
-    background-position: center, right top;
+    background-position: center, center;
 	background-attachment: fixed, fixed;
     background-size: cover, cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     position: fixed;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 	}
 	#left, #right {
 		top: 0; bottom: 0;
@@ -29,6 +31,7 @@
 		}
 		#top { top: 0; }
         #bottom { bottom: 0; }
+
 
 #square {
     position: fixed;
@@ -54,6 +57,7 @@ html, body {
     justify-content: center;
 }
 
+
 header li{
     list-style: none;
 }
@@ -63,7 +67,7 @@ header a{
     font-size: 1.3rem;
     color: #FEFEFE;
     text-decoration: none;
-    letter-spacing: 4px;
+    letter-spacing: 0.3rem;
     -webkit-transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
@@ -77,17 +81,17 @@ header .navbar-nav {
 }
 
 header .navbar-nav:last-child {
-    margin-right: 3.0em;
+    margin-right: 3.0rem;
 }
 
 header .nav-item{
-    margin-bottom: 0.7em;
+    margin-bottom: 0.7rem;
     padding: 5px;
     font-weight: 500;
 }
 
 header .navbar-brand{
-    margin-left: 3.5em;
+    margin-left: 4.3rem;
 }
 
 #top-menu li.active #about, header .about:hover{
@@ -96,7 +100,7 @@ header .navbar-brand{
 }
 
 #top-menu li.active #work, header .work:hover{
-    color: #B239EE;
+    color: #b239ee;
     transform: translateY(-1px);
 }
 
@@ -107,13 +111,13 @@ header .navbar-brand{
 }
 
 #top-menu li.active #contact, header .contact:hover{
-    color: #39AFEE;
+    color: #EE7639;
     transform: translateY(-1px);
 }
 
 body{
     font-family: 'Roboto', sans-serif;
-    background-image: linear-gradient(0deg, rgba(22, 22, 22, 0.30), rgba(22, 22, 22, 0.30)), url('SplashBackground.png');
+    background-image: linear-gradient(0deg, rgba(27, 27, 27, 0.9), rgba(27, 27, 27, 0.9)), url('SplashBackgroundInverted.png');
     background-repeat: no-repeat, no-repeat;
     background-position: center, right top;
 	background-attachment: fixed, fixed;
@@ -128,24 +132,17 @@ section{
     color: #FEFEFE;
     min-height: 100vh;
     display: flex;
-    background-color: rgb(41, 41, 41);
     font-style: normal;
-    margin: 10px;
 }
 
 section .title-line {
-    height: 5px;
-    width: 60px;
+    height: 0.3rem;
+    width: 4rem;
     text-align: center;
     margin: auto;
     margin-bottom: 30px;
     margin-top: 12px;
 }
-
-#HOME {
-    margin-top: 0px;
-}
-
 
 #HOME h1{
     font-weight: 900;
@@ -186,12 +183,12 @@ section .title-line {
 }
 
 #HOME .title-line {
-    background-color: #EE7639;
+    background-color: #39AFEE;
 }
 
 #HOME .btn-orange {
     color:  #FEFEFE;
-    background-color: #EE7639;
+    background-color: #39AFEE;
     font-weight: 400;
     font-size: 30px;
 }
@@ -209,7 +206,7 @@ section .title-line {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     color:  #ffffff;
-    background-color: #fc7735;
+    background-color: #37b9ff;
 }
 
 #ABOUT h1 {
@@ -245,7 +242,7 @@ section .title-line {
     text-orientation: upright;
     writing-mode: vertical-lr;
     font-weight: 500;
-    font-size: 28px;
+    font-size: 1.8rem;
 }
 
 #WORK .card:hover{
@@ -268,7 +265,7 @@ section .title-line {
 }
 
 #WORK .card-img-overlay:hover{
-    background-image: linear-gradient(135deg, rgba(22, 22, 22, 0.1), rgba(22, 22, 22, 0.1));
+    background-image: linear-gradient(135deg, rgba(22, 22, 22, 0.25), rgba(22, 22, 22, 0.25));
     color: #b239ee;
 }
 
@@ -315,7 +312,6 @@ section .title-line {
     margin-top: 10px;
 }
 
-
 #RESUME h1 {
     font-weight: 700;
     font-size: 64px;
@@ -346,7 +342,6 @@ section .title-line {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     color:  #ffffff;
-    /*background-color: #39f3a6;*/
     background-color: #59f0be;
 }
 
@@ -356,20 +351,12 @@ section .title-line {
 }
 
 #CONTACT .title-line {
-    background-color: #39AFEE;
+    background-color: #EE7639;
 }
 
 #CONTACT i {
     font-size: 70px;
-    margin: 60px;
-}
-
-#CONTACT .phone{
-    margin-right: 70px;
-}
-
-#CONTACT .email{
-    margin-left: 40px;
+    margin: 70px;
 }
 
 #CONTACT h6{
@@ -380,16 +367,19 @@ section .title-line {
 
 #CONTACT h6 a{
     font-size: 20px;
-    margin: 20px;
     margin-top: -35px;
-    text-decoration: none;
+    //text-decoration: none;
+    color: #EE7639;
 }
 
+#CONTACT h6 a:hover{
+    color: #ff7c3b;
+}
 
 #CONTACT .btn:hover{
     cursor: pointer;
     transform: translateY(-3px);
-    color:  #39AFEE !important;
+    color:  #EE7639 !important;
     text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
