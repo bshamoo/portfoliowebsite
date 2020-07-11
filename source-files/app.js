@@ -37,28 +37,39 @@ $(window).scroll(function(){
 
 // Square Color Change Bind Based on Active Class
 $(document).ready(function() {
-    $("#square").css('background-color', '#39AFEE');
-    $("#top, #bottom, #left, #right").css('background-image', 'linear-gradient(0deg, rgba(22, 22, 22, 0.4),  rgba(22, 22, 22, 0.4)), linear-gradient(0deg, rgba(57, 175, 238, 0.6),  rgba(57, 175, 238, 0.6)), url("css/BlurBackground.gif")');
+    var home_color = 'rgb(30, 144, 255)';
+    var home_bg = 'linear-gradient(0deg, rgba(22, 22, 22, 0.4),  rgba(22, 22, 22, 0.4)), linear-gradient(0deg, rgba(30, 144, 255, 0.6),  rgba(30, 144, 255, 0.6)), url("css/BlurBackground.gif")';
+    var about_color = 'rgb(24, 125, 233)';
+    var about_bg = 'linear-gradient(0deg, rgba(22, 22, 22, 0.4),  rgba(22, 22, 22, 0.4)), linear-gradient(0deg, rgba(24, 125, 233, 0.6),  rgba(24, 125, 233, 0.6)), url("css/BlurBackground.gif")';
+    var work_color = 'rgb(18, 106, 210)';
+    var work_bg = 'linear-gradient(0deg, rgba(22, 22, 22, 0.4),  rgba(22, 22, 22, 0.4)), linear-gradient(0deg, rgba(18, 106, 210, 0.6),  rgba(18, 106, 210, 0.6)), url("css/BlurBackground.gif")';
+    var resume_color = 'rgb(12, 86, 188)';
+    var resume_bg = 'linear-gradient(0deg, rgba(22, 22, 22, 0.4),  rgba(22, 22, 22, 0.4)), linear-gradient(0deg, rgba(12, 86, 188, 0.6),  rgba(12, 86, 188, 0.6)), url("css/BlurBackground.gif")';
+    var contact_color = 'rgb(6, 67, 165)';
+    var contact_bg = 'linear-gradient(0deg, rgba(22, 22, 22, 0.4),  rgba(22, 22, 22, 0.4)), linear-gradient(0deg, rgba(6, 67, 165, 0.6),  rgba(6, 67, 165, 0.6)), url("css/BlurBackground.gif")';
+    
+    $("#square").css('background-color', home_color);
+    $("#top, #bottom, #left, #right").css('background-image', home_bg);
     $(window).scroll(function(){
         if ($('li.nav-home').hasClass('active')) {
-            $("#square").css('background-color', '#39AFEE');
-            $("#top, #bottom, #left, #right").css('background-image', 'linear-gradient(0deg, rgba(22, 22, 22, 0.4),  rgba(22, 22, 22, 0.4)), linear-gradient(0deg, rgba(57, 175, 238, 0.6),  rgba(57, 175, 238, 0.6)), url("css/BlurBackground.gif")');
+            $("#square").css('background-color', home_color);
+            $("#top, #bottom, #left, #right").css('background-image', home_bg);
         }
         if($('li.nav-about').hasClass('active')) {
-            $("#square").css('background-color', '#AD396B');
-            $("#top, #bottom, #left, #right").css('background-image', 'linear-gradient(0deg, rgba(22, 22, 22, 0.4),  rgba(22, 22, 22, 0.4)), linear-gradient(0deg, rgba(173, 57, 107, 0.6),  rgba(173, 57, 107, 0.6)), url("css/BlurBackground.gif")');
+            $("#square").css('background-color', about_color);
+            $("#top, #bottom, #left, #right").css('background-image', about_bg);
         }
         else if($('li.nav-work').hasClass('active')) {
-            $("#square").css('background-color', '#B239EE');
-            $("#top, #bottom, #left, #right").css('background-image', 'linear-gradient(0deg, rgba(22, 22, 22, 0.4),  rgba(22, 22, 22, 0.4)), linear-gradient(0deg, rgba(178, 57, 238, 0.6),  rgba(178, 57, 238, 0.6)), url("css/BlurBackground.gif")');
+            $("#square").css('background-color', work_color);
+            $("#top, #bottom, #left, #right").css('background-image', work_bg);
         }
         else if($('li.nav-resume').hasClass('active')) {
-            $("#square").css('background-color', '#53e0b1');
-            $("#top, #bottom, #left, #right").css('background-image', 'linear-gradient(0deg, rgba(22, 22, 22, 0.4),  rgba(22, 22, 22, 0.4)), linear-gradient(0deg, rgba(83, 224, 177, 0.6),  rgba(83, 224, 177, 0.6)), url("css/BlurBackground.gif")');
+            $("#square").css('background-color', resume_color);
+            $("#top, #bottom, #left, #right").css('background-image', resume_bg);
         }
         else if($('li.nav-contact').hasClass('active')) {
-            $("#square").css('background-color', '#EE7639');
-            $("#top, #bottom, #left, #right").css('background-image', 'linear-gradient(0deg, rgba(22, 22, 22, 0.4),  rgba(22, 22, 22, 0.4)), linear-gradient(0deg, rgba(238, 118, 57, 0.6),  rgba(238, 118, 57, 0.6)), url("css/BlurBackground.gif")');
+            $("#square").css('background-color', contact_color);
+            $("#top, #bottom, #left, #right").css('background-image', contact_bg);
         }
     });
 });

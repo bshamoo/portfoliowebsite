@@ -4,16 +4,20 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link 
-            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap" 
-            rel="stylesheet"
-        />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"/>
         <link 
             rel="stylesheet" 
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
             integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
             crossorigin="anonymous"
         />
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#253b84">
+        <meta name="msapplication-TileColor" content="#2b5797">
+        <meta name="theme-color" content="#ffffff">
         <link rel="stylesheet" href="css/main.css"/>
         <script src="https://kit.fontawesome.com/052108c2ad.js" crossorigin="anonymous"></script>
         <title>Brandon Shamoo</title>
@@ -21,9 +25,9 @@
     <body >
         <header>
             <div class="container-fluid">
-                <nav class="navbar fixed-top navbar-expand-lg">
+                <nav class="navbar fixed-top navbar-dark navbar-expand-lg">
                     <li class="nav-home active">
-                        <a class="navbar-brand home" href="#HOME"> <img src="Images/SignatureInverted.png" width="155" height="105" alt="Brandon Shamoo" loading="lazy"></a>
+                        <a class="navbar-brand home" href="#HOME"> <img src="Images/SignatureInverted.png" width="105" height="70" alt="Brandon Shamoo" loading="lazy"></a>
                     </li>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
@@ -76,13 +80,16 @@
 
             <!-- ABOUT START -->
                 <section data-index="1" class="section" id="ABOUT">
-                    <div class="container-fluid d-flex align-items-center justify-content-center text-center">
-                        <div class="row">
-                            <div class="col">
+                    <div class="container-fluid d-flex align-items-center flex-column justify-content-center text-center">
+                        <div class="row d-flex align-items-center justify-content-center text-center">
+                            <div class="col-9">
                                 <h1>ABOUT</h1>
                                 <div class="title-line"></div>
-                                <img src="Images/ProfilePic.PNG" width="300" height="510" alt="About Picture" loading="lazy">
-                                <p>Hi! I'm Brandon Shamoo and welcome to my portfolio website.</p>
+                                <img src="Images/ProfilePic.PNG" width="270" height="460" alt="About Picture" loading="lazy">
+                                <p>
+                                    Hi! I'm Brandon Shamoo and welcome to my portfolio website. This website is currently in beta testing, 
+                                    so if you find a bug or have a design recommendation just let me know. Thanks for visiting!
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -92,8 +99,8 @@
             <!-- WORK START -->
                 <section data-index="2" class="section" id="WORK">
                     <div class="container-fluid d-flex flex-column align-items-center justify-content-center text-center">
-                        <div class="row">
-                            <div class="col">
+                        <div class="row d-flex align-items-center justify-content-center text-center">
+                            <div class="col-lg">
                                 <h1>WORK</h1>
                                 <div class="title-line"></div>
                             </div>
@@ -101,7 +108,7 @@
                         <!-- Card deck start-->
                     <div class="card-deck w-75">
                         <!-- Card 1 -->
-                        <div class="col-lg">
+                        <div class="col-sm">
                         <div class="card apps mx-3 mb-5">
                             <!-- Content -->
                             <img class="card-img-top " src="css/foodscan.PNG" alt="Food Scan Background">
@@ -117,7 +124,7 @@
                         </div>
                         </div>
                         <!-- Card 2 -->
-                        <div class="col-lg">
+                        <div class="col-sm">
                         <div class="card games mx-3 mt-5">
                             <!-- Content -->
                             <img class="card-img-top" src="css/cubegame.PNG" alt="Cube Game Background">
@@ -133,7 +140,7 @@
                         </div>
                         </div>
                         <!-- Card 3 --> 
-                        <div class="col-lg">
+                        <div class="col-sm">
                         <div class="card music mx-3 mb-5">
                             <!-- Content -->
                             <img class="card-img-top" src="css/musicartwork.svg" alt="Music Artwork Background">
@@ -149,7 +156,7 @@
                         </div>
                         </div>
                         <!-- Card 4 -->
-                        <div class="col-lg">
+                        <div class="col-sm">
                         <div class="card startups mx-3 mt-5">
                             <!-- Content -->
                             <img class="card-img-top" src="css/MSstartup.svg" alt="Startup Background">
@@ -253,16 +260,16 @@
             <!-- RESUME START -->
                 <section data-index="3" class="section" id="RESUME">
                     <div class="container-fluid d-flex flex-column align-items-center justify-content-center text-center">
-                        <div class="row">
+                        <div class="row d-flex align-items-center justify-content-center text-center">
                             <div class="col">
                                 <h1>RESUME</h1>
                                 <div class="title-line"></div>
-                                <img src="css/SplashBackgroundInverted.png" width="750" height="500" alt="Brandon Shamoo's Resume" loading="lazy">
+                                <embed src="Images\Brandon_Shamoo_Resume.PDF" width="700" height="650"/>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row align-items-center">
                             <div class="col">
-                                <a href="#RESUME" class="btn btn-green px-3 py-2">DOWNLOAD <i class="fas fa-file-export"></i></a>
+                                <a href="Images\Brandon_Shamoo_Resume.PDF" target="_blank" class="btn btn-green px-3 py-2">DOWNLOAD <i class="fas fa-file-export"></i></a>
                             </div>
                         </div>
                     </div>
@@ -272,43 +279,43 @@
             <!-- CONTACT START -->
                 <section data-index="4" class="section" id="CONTACT">
                     <div class="container-fluid d-flex flex-column align-items-center justify-content-center text-center">
-                        <div class="row">
+                        <div class="row d-flex align-items-center justify-content-center text-center">
                             <div class="col">
                                 <h1>CONTACT</h1>
                                 <div class="title-line"></div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md px-5 mx-5">
+                        <div class="row align-items-center">
+                            <div class="col-md-auto">
                                 <div class="phone">
                                     <i class="fas fa-phone-alt" style="color: #FEFEFE"></i>
                                     <h6>1-949-355-3137</h6>
                                 </div>
                             </div>
-                            <div class="col-md px-5 mx-5">
+                            <div class="col-md-auto">
                                 <div class="email">
                                     <i class="fas fa-envelope" style="color: #FEFEFE"></i>
                                     <h6><a href="mailto:bshamoo@icloud.com">bshamoo@icloud.com</a></h6>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md mx-3">
+                        <div class="row align-items-center">
+                            <div class="col-md-auto">
                                 <a href="https://music.apple.com/profile/shamuson" target="_blank">
                                     <i class="btn fab fa-itunes-note" style="color: #FEFEFE"></i>
                                 </a>
                             </div>
-                            <div class="col-md mx-3">
+                            <div class="col-md-auto">
                                 <a href="https://linkedin.com/in/brandonshamoo" target="_blank">
                                     <i class="btn fab fa-linkedin-in" style="color: #FEFEFE"></i>
                                 </a>
                             </div>
-                            <div class="col-md mx-3">
+                            <div class="col-md-auto">
                                 <a href="https://github.com/bshamoo" target="_blank">
                                     <i class="btn fab fa-github" style="color: #FEFEFE"></i>
                                 </a>
                             </div>
-                            <div class="col-md mx-3">
+                            <div class="col-md-auto">
                                 <a href="https://www.facebook.com/brandon.shamoo.3/" target="_blank">
                                     <i class="btn fab fa-facebook" style="color: #FEFEFE"></i>
                                 </a>
@@ -322,6 +329,7 @@
         <!-- Border Start-->
         <div id="left"></div>
         <div id="right"></div>
+        <div id="navtop"></div>
         <div id="top"></div>
         <div id="bottom"></div>
         <!-- Border End-->
