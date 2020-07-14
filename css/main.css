@@ -340,6 +340,7 @@ section .title-line {
 
 #WORK h3 {
   text-orientation: upright;
+  -webkit-text-orientation: upright;
   -webkit-writing-mode: vertical-lr;
       -ms-writing-mode: tb-lr;
           writing-mode: vertical-lr;
@@ -555,8 +556,8 @@ footer {
     margin-left: -0.25rem;
   }
   header .navbar-brand img {
-    width: 90px;
-    height: 60px;
+    width: 85px;
+    height: 55px;
     padding: 5px;
   }
   header .navbar {
@@ -654,6 +655,7 @@ footer {
     -webkit-writing-mode: vertical-lr;
         -ms-writing-mode: tb-lr;
             writing-mode: vertical-lr;
+    -webkit-text-orientation: upright;
     text-orientation: upright;
     font-weight: 500;
     font-size: 1.25rem;
@@ -785,8 +787,8 @@ footer {
     margin-left: -0.25rem;
   }
   header .navbar-brand img {
-    width: 90px;
-    height: 60px;
+    width: 85px;
+    height: 55px;
     padding: 5px;
   }
   header .navbar {
@@ -887,6 +889,7 @@ footer {
     -webkit-writing-mode: vertical-lr;
         -ms-writing-mode: tb-lr;
             writing-mode: vertical-lr;
+    -webkit-text-orientation: upright;
     text-orientation: upright;
     font-weight: 500;
     font-size: 0.65rem;
@@ -1119,6 +1122,7 @@ footer {
     -webkit-writing-mode: vertical-lr;
         -ms-writing-mode: tb-lr;
             writing-mode: vertical-lr;
+    -webkit-text-orientation: upright;
     text-orientation: upright;
     font-weight: 500;
     font-size: 1.25rem;
@@ -1296,6 +1300,7 @@ footer {
     -webkit-writing-mode: vertical-lr;
         -ms-writing-mode: tb-lr;
             writing-mode: vertical-lr;
+    -webkit-text-orientation: upright;
     text-orientation: upright;
     font-weight: 500;
     font-size: 1.25rem;
@@ -1465,6 +1470,7 @@ footer {
     -webkit-writing-mode: vertical-lr;
         -ms-writing-mode: tb-lr;
             writing-mode: vertical-lr;
+    -webkit-text-orientation: upright;
     text-orientation: upright;
     font-weight: 500;
     font-size: 1.25rem;
