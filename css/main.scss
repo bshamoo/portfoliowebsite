@@ -13,6 +13,13 @@
     box-sizing: border-box;
 }
 
+.container {
+    min-height:100%;
+    position:relative;
+    height:100%;
+ }
+
+
 #top, #bottom, #left, #right {
     background-repeat: no-repeat, no-repeat;
     background-position: center, center;
@@ -59,10 +66,11 @@ html {
 }
 
 html, body {
-    height: 100%;
+    min-height: 100%;
     width: 100%;
-    display: flex;
     justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 header .navbar {
@@ -142,9 +150,9 @@ body{
 section{
     color: #FEFEFE;
     min-height: 100vh;
-    max-width: 80vw;
     display: flex;
     font-style: normal;
+    width: 100%
 }
 
 section h1  {
@@ -244,7 +252,7 @@ section .title-line {
 
 #WORK .card-deck {
     margin-top: 20px;
-    width: 60% !important;
+    width: 85% !important;
 }
 
 
@@ -409,49 +417,51 @@ footer {
     
     html {
         overflow-x: hidden;
+        background-color: rgba(35, 35, 35, 1);
     }
 
-    #navtop {
-        background-image: linear-gradient(0deg, rgba(27, 27, 27, 0.875), rgba(27, 27, 27, 0.875)), url('SplashBackgroundInverted.png');
-        background-repeat: no-repeat, no-repeat;
-        background-position: center, right top;
-        background-attachment: fixed, fixed;
-        background-size: cover, cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        position: fixed;
-        }	
-        #navtop{
-            left: 25px; right: 25px;
-            height: 85px;
-            }
-            #navtop { top: 0; }
-    
-    
     #left, #right {
         top: 0; bottom: 0;
-        width: 25px;
-        z-index: 10000000;
+        width: 0px;
         }
         #left { left: 0; }
-        #right { right: 0; }	
-    #top, #bottom {
+        #right { right: 0; }
+    	
+    #top{
         left: 0; right: 0;
-        height: 25px;
-        z-index: 10000000;
+        height: 0px;
+        }
+    #bottom {
+        left: 0; right: 0;
+        height: 0px;
         }
         #top { top: 0; }
         #bottom { bottom: 0; }
 
+    #navtop {
+        background-color: rgb(30, 30, 30);
+        background-attachment: scroll;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        position: fixed;
+        z-index: 1;
+        }	
+        #navtop{
+            left: 0px; right: 0px;
+            height: 70px;
+            }
+            #navtop { top: 0; }
 
     #square {
     position: fixed;
-    right: 25px;
-    top: 25px;
-    height: 60px;
-    width: 60px;
-    z-index: 2;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    height: 72.5px;
+    width: 100vw;
+    z-index: 1;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -459,44 +469,54 @@ footer {
     }
 
     header .navbar-brand{
-        margin-left: 0rem;
+        margin-left: -0.25rem;
     }
 
     header .navbar-brand img{
         width: 90px; 
-        height: 55px;
+        height: 60px;
+        padding: 5px;
     }
 
     header .navbar {
-        padding: 1.4rem 1.6rem;
+        padding: 0rem 1rem;
     }
 
     header .nav-item{
         padding: 5px;
         font-weight: 500;
-        font-size: 1.3rem;
-        margin-bottom: 5.5rem;
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
     }
 
     header .navbar-collapse{
-        background-color: rgba(27, 27, 27, 0.92);
+        background-color: rgba(30, 30, 30, 1);
         text-align: center;
         align-items: center;
-        padding-top: 3.5rem;
+        padding-top: 1.5rem;
+        width: 100%;
     }
 
     header .navbar-toggler-icon {
-        margin-top: 10px;
-        margin-bottom: 10px; 
-        margin-right: 1px;
-        margin-left: 1px;
+        margin-left: -5px;
+        margin-right: -5px;
     }
 
-    section{
-        color: #FEFEFE;
-        max-width: 80vw;
-        display: flex;
-        font-style: normal;
+    body{
+        background-image: linear-gradient(0deg, rgba(27, 27, 27, 0.875), rgba(27, 27, 27, 0.875)), url('SplashBackgroundInverted.png');
+        background-repeat: repeat, repeat;
+        background-position: center, right top;
+        background-attachment: scroll, scroll;
+        background-size: auto, auto;
+        -webkit-background-size: auto, auto;
+        -moz-background-size: auto, auto;
+        -o-background-size: auto, auto;
+        letter-spacing: 1px;
+    }
+
+    section {
+        margin-top: auto;
+        margin-bottom: auto;
     }
 
     section h1  {
@@ -511,10 +531,6 @@ footer {
     margin: auto;
     margin-bottom: 30px;
     margin-top: 12px;
-    }
-
-    #HOME {
-        margin-bottom: -125px;
     }
 
     #HOME .title-line {
@@ -550,6 +566,10 @@ footer {
         font-size: 22px;
     }
 
+    #ABOUT, #WORK, #CONTACT, #RESUME {
+        background-color: rgba(35, 35, 35, 0.75);
+    }
+
     #ABOUT img {
         margin-top: -30px;
         width: 150px;
@@ -562,8 +582,8 @@ footer {
     }
 
     #WORK h3 {
-        text-orientation: upright;
         writing-mode: vertical-lr;
+        text-orientation: upright;
         font-weight: 500;
         font-size: 1.25rem;
     }
@@ -606,7 +626,7 @@ footer {
         width: 225px;
         height: 325px;
     }
-    
+
     #CONTACT i {
         font-size: 55px;
         margin: 50px;
@@ -624,63 +644,71 @@ footer {
     }
 
     footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
+        position: absolute;
+        bottom: 0px;
         width: 100%;
+        height: 1.5rem; 
         color: #FEFEFE;
         text-align: center;
         font-size: 0.55rem;
         letter-spacing: 0px;
-        margin-bottom: -10px;
-        z-index: 100000000;
+        background-color: var(--contact-color);
     }
-    
+
+    footer p{
+        padding-top: 5px;
+    }
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) and (max-width: 767.98px) and (-webkit-min-device-pixel-ratio: 1) {
-    #navtop {
-        background-image: linear-gradient(0deg, rgba(27, 27, 27, 0.875), rgba(27, 27, 27, 0.875)), url('SplashBackgroundInverted.png');
-        background-repeat: no-repeat, no-repeat;
-        background-position: center, right top;
-        background-attachment: fixed, fixed;
-        background-size: cover, cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        position: fixed;
-        }	
-        #navtop{
-            left: 25px; right: 25px;
-            height: 85px;
-            }
-            #navtop { top: 0; }
-    
-    
+    html {
+        overflow-x: hidden;
+        background-color: rgba(35, 35, 35, 1);
+    }
+
     #left, #right {
         top: 0; bottom: 0;
-        width: 25px;
-        z-index: 10000000;
+        width: 0px;
         }
         #left { left: 0; }
-        #right { right: 0; }	
-    #top, #bottom {
+        #right { right: 0; }
+    	
+    #top{
         left: 0; right: 0;
-        height: 25px;
-        z-index: 10000000;
+        height: 0px;
+        }
+    #bottom {
+        left: 0; right: 0;
+        height: 0px;
         }
         #top { top: 0; }
         #bottom { bottom: 0; }
 
+    #navtop {
+        background-color: rgb(30, 30, 30);
+        background-attachment: scroll;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        position: fixed;
+        z-index: 1;
+        }	
+        #navtop{
+            left: 0px; right: 0px;
+            height: 70px;
+            }
+            #navtop { top: 0; }
 
     #square {
     position: fixed;
-    right: 25px;
-    top: 25px;
-    height: 60px;
-    width: 60px;
-    z-index: 2;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    height: 72.5px;
+    width: 100vw;
+    z-index: 1;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -688,49 +716,54 @@ footer {
     }
 
     header .navbar-brand{
-        margin-left: 0rem;
+        margin-left: -0.25rem;
     }
 
-    header .navbar-brand img{
+      header .navbar-brand img{
         width: 90px; 
-        height: 55px;
+        height: 60px;
+        padding: 5px;
     }
 
     header .navbar {
-        padding: 1.4rem 1.6rem;
+        padding: 0rem 1rem;
     }
 
     header .nav-item{
         padding: 5px;
         font-weight: 500;
-        font-size: 1.3rem;
-        margin-bottom: 0.5rem;
-    }
-
-    header .navbar-nav:last-child {
-        margin-bottom: 5rem;
+        font-size: 1rem;
+        margin-bottom: 1rem;
     }
 
     header .navbar-collapse{
-        background-color: rgba(27, 27, 27, 0.9);
+        background-color: rgba(30, 30, 30, 1);
         text-align: center;
-        padding-top: 0.5rem;
+        align-items: center;
+        padding-top: 1rem;
+        width: 100%;
     }
 
     header .navbar-toggler-icon {
-        margin-top: 10px;
-        margin-bottom: 10px; 
-        margin-right: 1px;
-        margin-left: 1px;
+        margin-left: -5px;
+        margin-right: -5px;
     }
 
-    section{
-        color: #FEFEFE;
-        max-width: 80vw;
-        display: flex;
-        font-style: normal;
-        padding-top: 3.5rem;
-        padding-bottom: 3.5rem;
+    body{
+        background-image: linear-gradient(0deg, rgba(27, 27, 27, 0.875), rgba(27, 27, 27, 0.875)), url('SplashBackgroundInverted.png');
+        background-repeat: repeat, repeat;
+        background-position: center, right top;
+        background-attachment: scroll, scroll;
+        background-size: auto, auto;
+        -webkit-background-size: auto, auto;
+        -moz-background-size: auto, auto;
+        -o-background-size: auto, auto;
+        letter-spacing: 1px;
+    }
+
+    section {
+        margin-top: auto;
+        margin-bottom: auto;
     }
 
     #HOME{
@@ -749,6 +782,10 @@ footer {
     margin: auto;
     margin-bottom: 30px;
     margin-top: 12px;
+    }
+
+    #ABOUT, #WORK, #CONTACT, #RESUME {
+        background-color: rgba(35, 35, 35, 0.75);
     }
 
     #HOME .title-line {
@@ -796,6 +833,8 @@ footer {
     }
 
     #WORK h3 {
+        writing-mode: vertical-lr;
+        text-orientation: upright;
         font-weight: 500;
         font-size: 0.65rem;
     }
@@ -859,67 +898,71 @@ footer {
     }
 
     footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
+        position: absolute;
+        bottom: 0px;
         width: 100%;
+        height: 1.5rem; 
         color: #FEFEFE;
         text-align: center;
         font-size: 0.55rem;
         letter-spacing: 0px;
-        margin-bottom: -10px;
-        z-index: 100000000;
+        background-color: var(--contact-color);
+    }
+
+    footer p{
+        padding-top: 5px;
     }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) and (max-width: 991.98px) and (-webkit-min-device-pixel-ratio: 1) {
-     
     html {
         overflow-x: hidden;
+        background-color: rgba(35, 35, 35, 1);
     }
 
-    #navtop {
-        background-image: linear-gradient(0deg, rgba(27, 27, 27, 0.875), rgba(27, 27, 27, 0.875)), url('SplashBackgroundInverted.png');
-        background-repeat: no-repeat, no-repeat;
-        background-position: center, right top;
-        background-attachment: fixed, fixed;
-        background-size: cover, cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        position: fixed;
-        }	
-        #navtop{
-            left: 40px; right: 40px;
-            height: 115px;
-            }
-            #navtop { top: 0; }
-    
-    
     #left, #right {
         top: 0; bottom: 0;
-        width: 40px;
-        z-index: 10000000;
+        width: 0px;
         }
         #left { left: 0; }
         #right { right: 0; }
-    #top, #bottom {
+    	
+    #top{
         left: 0; right: 0;
-        height: 40px;
-        z-index: 10000000;
+        height: 0px;
+        }
+    #bottom {
+        left: 0; right: 0;
+        height: 0px;
         }
         #top { top: 0; }
         #bottom { bottom: 0; }
 
+    #navtop {
+        background-color: rgb(30, 30, 30);
+        background-attachment: scroll;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        position: fixed;
+        z-index: 1;
+        }	
+        #navtop{
+            left: 0px; right: 0px;
+            height: 70px;
+            }
+            #navtop { top: 0; }
 
     #square {
     position: fixed;
-    right: 40px;
-    top: 40px;
-    height: 75px;
-    width: 75px;
-    z-index: 2;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    height: 72.5px;
+    width: 100vw;
+    z-index: 1;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -927,44 +970,54 @@ footer {
     }
 
     header .navbar-brand{
-        margin-left: 0rem;
+        margin-left: -0.25rem;
     }
 
     header .navbar-brand img{
-        width: 105px; 
-        height: 70px;
+        width: 90px; 
+        height: 60px;
+        padding: 5px;
     }
 
     header .navbar {
-        padding: 2.3rem 3rem;
+        padding: 0rem 1rem;
     }
 
     header .nav-item{
         padding: 5px;
         font-weight: 500;
-        font-size: 1.3rem;
-        margin-bottom: 10rem;
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
     }
 
     header .navbar-collapse{
-        background-color: rgba(27, 27, 27, 0.92);
+        background-color: rgba(30, 30, 30, 1);
         text-align: center;
         align-items: center;
-        padding-top: 3.5rem;
+        padding-top: 1.5rem;
+        width: 100%;
     }
 
     header .navbar-toggler-icon {
-        margin-top: 10px;
-        margin-bottom: 10px; 
-        margin-right: 1px;
-        margin-left: 1px;
+        margin-left: -5px;
+        margin-right: -5px;
     }
 
-    section{
-        color: #FEFEFE;
-        max-width: 80vw;
-        display: flex;
-        font-style: normal;
+    body{
+        background-image: linear-gradient(0deg, rgba(27, 27, 27, 0.875), rgba(27, 27, 27, 0.875)), url('SplashBackgroundInverted.png');
+        background-repeat: repeat, repeat;
+        background-position: center, right top;
+        background-attachment: scroll, scroll;
+        background-size: auto, auto;
+        -webkit-background-size: auto, auto;
+        -moz-background-size: auto, auto;
+        -o-background-size: auto, auto;
+        letter-spacing: 1px;
+    }
+
+    section {
+        margin-top: auto;
+        margin-bottom: auto;
     }
 
     section h1  {
@@ -981,9 +1034,10 @@ footer {
     margin-top: 12px;
     }
 
-    #HOME {
-        margin-bottom: -170px;
+    #ABOUT, #WORK, #CONTACT, #RESUME {
+        background-color: rgba(35, 35, 35, 0.75);
     }
+
 
     #HOME .title-line {
         margin-bottom: 25px;
@@ -1030,8 +1084,8 @@ footer {
     }
 
     #WORK h3 {
-        text-orientation: upright;
         writing-mode: vertical-lr;
+        text-orientation: upright;
         font-weight: 500;
         font-size: 1.25rem;
     }
@@ -1090,16 +1144,19 @@ footer {
     }
 
     footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
+        position: absolute;
+        bottom: 0px;
         width: 100%;
+        height: 1.5rem; 
         color: #FEFEFE;
         text-align: center;
         font-size: 0.55rem;
         letter-spacing: 0px;
-        margin-bottom: -5px;
-        z-index: 100000000;
+        background-color: var(--contact-color);
+    }
+
+    footer p{
+        padding-top: 5px;
     }
 }
 
@@ -1158,13 +1215,6 @@ footer {
 
     header .navbar-brand{
         margin-left: 1.8rem;
-    }
-
-    section{
-        color: #FEFEFE;
-        max-width: 85vw;
-        display: flex;
-        font-style: normal;
     }
 
     section h1  {
@@ -1230,8 +1280,8 @@ footer {
     }
 
     #WORK h3 {
-        text-orientation: upright;
         writing-mode: vertical-lr;
+        text-orientation: upright;
         font-weight: 500;
         font-size: 1.25rem;
     }
@@ -1357,13 +1407,6 @@ footer {
         margin-left: 1.8rem;
     }
 
-    section{
-        color: #FEFEFE;
-        max-width: 85vw;
-        display: flex;
-        font-style: normal;
-    }
-
     section h1  {
         font-weight: 700;
         font-size: 3.0rem;
@@ -1424,8 +1467,8 @@ footer {
     }
 
     #WORK h3 {
-        text-orientation: upright;
         writing-mode: vertical-lr;
+        text-orientation: upright;
         font-weight: 500;
         font-size: 1.25rem;
     }
