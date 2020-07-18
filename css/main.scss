@@ -70,6 +70,7 @@ html, body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    position: relative;
 }
 
 
@@ -252,7 +253,7 @@ section .title-line {
 
 #WORK .card-deck {
     margin-top: 20px;
-    width: 85% !important;
+    width: 50% !important;
 }
 
 
@@ -418,7 +419,7 @@ footer {
 @media (max-width: 575.98px) and (-webkit-min-device-pixel-ratio: 1) {
     
     html {
-        overflow-x: hidden;
+        //overflow-x: hidden;
         background-color: rgba(35, 35, 35, 1);
     }
 
@@ -587,12 +588,12 @@ footer {
     }
 
     #WORK, #CONTACT, #RESUME {
-        background-color: rgba(35, 35, 35, 0.75);
+        background-color: rgba(80, 80, 80, 0.3);
     }
 
     #ABOUT .container-fluid {
-        background-color: rgba(35, 35, 35, 0.75);
-        padding-bottom: 70px;
+        background-color: rgba(80, 80, 80, 0.3);
+        padding-bottom: 100px;
     }
 
     section .sec-bg{
