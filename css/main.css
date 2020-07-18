@@ -1,5 +1,5 @@
 :root {
-  --home-color: rgb(30, 144, 255);
+  --home-color: #1e90ff;
   --about-color: rgb(24, 125, 233);
   --work-color: rgb(18, 106, 210);
   --resume-color: rgb(12, 86, 188);
@@ -341,9 +341,9 @@ section .title-line {
 #WORK h3 {
   text-orientation: upright;
   -webkit-text-orientation: upright;
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
   -webkit-writing-mode: vertical-lr;
-      -ms-writing-mode: tb-lr;
-          writing-mode: vertical-lr;
   font-weight: 500;
   font-size: 1.5rem;
 }
@@ -549,6 +549,8 @@ footer {
     height: 69.5px;
     width: 100vw;
     z-index: 1;
+    -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
   }
@@ -595,8 +597,21 @@ footer {
     letter-spacing: 1px;
   }
   section {
-    margin-top: auto;
-    margin-bottom: auto;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    min-height: 70vh;
+  }
+  #HOME {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    min-height: 100vh;
+  }
+  #ABOUT {
+    padding-top: 70px;
+    padding-bottom: 0px;
+  }
+  #CONTACT {
+    padding-bottom: 0px;
   }
   section h1 {
     font-weight: 700;
@@ -639,8 +654,18 @@ footer {
   #HOME .btn-orange {
     font-size: 22px;
   }
-  #ABOUT, #WORK, #CONTACT, #RESUME {
+  #WORK, #CONTACT, #RESUME {
     background-color: rgba(35, 35, 35, 0.75);
+  }
+  #ABOUT .container-fluid {
+    background-color: rgba(35, 35, 35, 0.75);
+    padding-bottom: 70px;
+  }
+  section .sec-bg {
+    width: 100vw;
+    height: 74px;
+    background-color: #1e1e1e;
+    position: absolute;
   }
   #ABOUT .title-bg {
     background: -webkit-gradient(linear, left bottom, left top, from(#1e1e1e), to(rgba(24, 125, 233, 0.75)));
@@ -648,7 +673,10 @@ footer {
     position: absolute;
     height: 150px;
     width: 150px;
-    left: 101px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 50%;
   }
   #ABOUT img {
@@ -657,20 +685,20 @@ footer {
     height: 250px;
   }
   #ABOUT p {
-    font-size: 10px;
+    font-size: 11px;
     margin-top: -35px;
   }
   #WORK h3 {
-    -webkit-writing-mode: vertical-lr;
-        -ms-writing-mode: tb-lr;
-            writing-mode: vertical-lr;
+    -ms-writing-mode: tb-lr;
+        writing-mode: vertical-lr;
     -webkit-text-orientation: upright;
     text-orientation: upright;
+    -webkit-writing-mode: vertical-lr;
     font-weight: 500;
     font-size: 1.25rem;
   }
   #WORK .card-deck {
-    width: 75% !important;
+    width: 70% !important;
   }
   #WORK .card {
     margin-top: 0px !important;
@@ -691,7 +719,7 @@ footer {
   #WORK .modal-body p {
     font-style: normal;
     font-weight: 400;
-    font-size: 10px;
+    font-size: 11px;
     color: #FEFEFE;
   }
   #RESUME .btn-green {
@@ -789,6 +817,8 @@ footer {
     height: 69.5px;
     width: 100vw;
     z-index: 1;
+    -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
   }
@@ -835,11 +865,21 @@ footer {
     letter-spacing: 1px;
   }
   section {
-    margin-top: auto;
-    margin-bottom: auto;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    min-height: 70vh;
   }
   #HOME {
     padding-top: 4.75rem;
+    padding-bottom: 0px;
+    min-height: 100vh;
+  }
+  #ABOUT {
+    padding-top: 70px;
+    padding-bottom: 0px;
+  }
+  #CONTACT {
+    padding-bottom: 0px;
   }
   section h1 {
     font-weight: 700;
@@ -852,9 +892,6 @@ footer {
     margin: auto;
     margin-bottom: 30px;
     margin-top: 12px;
-  }
-  #ABOUT, #WORK, #CONTACT, #RESUME {
-    background-color: rgba(35, 35, 35, 0.75);
   }
   #HOME .title-line {
     margin-bottom: 25px;
@@ -885,13 +922,29 @@ footer {
   #HOME .btn-orange {
     font-size: 22px;
   }
+  #WORK, #CONTACT, #RESUME {
+    background-color: rgba(35, 35, 35, 0.75);
+  }
+  #ABOUT .container-fluid {
+    background-color: rgba(35, 35, 35, 0.75);
+    padding-bottom: 70px;
+  }
+  section .sec-bg {
+    width: 100vw;
+    height: 74px;
+    background-color: #1e1e1e;
+    position: absolute;
+  }
   #ABOUT .title-bg {
     background: -webkit-gradient(linear, left bottom, left top, from(#1e1e1e), to(rgba(24, 125, 233, 0.75)));
     background: linear-gradient(0deg, #1e1e1e, rgba(24, 125, 233, 0.75));
     position: absolute;
     height: 150px;
     width: 150px;
-    left: 195px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 50%;
   }
   #ABOUT img {
@@ -900,15 +953,15 @@ footer {
     height: 250px;
   }
   #ABOUT p {
-    font-size: 10px;
+    font-size: 11px;
     margin-top: -35px;
   }
   #WORK h3 {
-    -webkit-writing-mode: vertical-lr;
-        -ms-writing-mode: tb-lr;
-            writing-mode: vertical-lr;
+    -ms-writing-mode: tb-lr;
+        writing-mode: vertical-lr;
     -webkit-text-orientation: upright;
     text-orientation: upright;
+    -webkit-writing-mode: vertical-lr;
     font-weight: 500;
     font-size: 0.65rem;
   }
@@ -936,7 +989,7 @@ footer {
   #WORK .modal-body p {
     font-style: normal;
     font-weight: 400;
-    font-size: 10px;
+    font-size: 11px;
     color: #FEFEFE;
   }
   #RESUME .btn-green {
@@ -1034,6 +1087,8 @@ footer {
     height: 72.5px;
     width: 100vw;
     z-index: 1;
+    -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
   }
@@ -1080,8 +1135,21 @@ footer {
     letter-spacing: 1px;
   }
   section {
-    margin-top: auto;
-    margin-bottom: auto;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    min-height: 50vh;
+  }
+  #HOME {
+    padding-top: 4.75rem;
+    padding-bottom: 0px;
+    min-height: 100vh;
+  }
+  #ABOUT {
+    padding-top: 70px;
+    padding-bottom: 0px;
+  }
+  #CONTACT {
+    padding-bottom: 20px;
   }
   section h1 {
     font-weight: 700;
@@ -1095,8 +1163,18 @@ footer {
     margin-bottom: 30px;
     margin-top: 12px;
   }
-  #ABOUT, #WORK, #CONTACT, #RESUME {
+  #WORK, #CONTACT, #RESUME {
     background-color: rgba(35, 35, 35, 0.75);
+  }
+  #ABOUT .container-fluid {
+    background-color: rgba(35, 35, 35, 0.75);
+    padding-bottom: 70px;
+  }
+  section .sec-bg {
+    width: 100vw;
+    height: 95px;
+    background-color: #1e1e1e;
+    position: absolute;
   }
   #HOME .title-line {
     margin-bottom: 25px;
@@ -1108,7 +1186,7 @@ footer {
     color: white;
   }
   #HOME .wordCarousel {
-    font-size: 30px;
+    font-size: 32px;
     font-weight: 100;
     font-family: serif;
   }
@@ -1133,7 +1211,10 @@ footer {
     position: absolute;
     height: 200px;
     width: 200px;
-    left: 260px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 50%;
   }
   #ABOUT img {
@@ -1146,11 +1227,11 @@ footer {
     margin-top: -35px;
   }
   #WORK h3 {
-    -webkit-writing-mode: vertical-lr;
-        -ms-writing-mode: tb-lr;
-            writing-mode: vertical-lr;
+    -ms-writing-mode: tb-lr;
+        writing-mode: vertical-lr;
     -webkit-text-orientation: upright;
     text-orientation: upright;
+    -webkit-writing-mode: vertical-lr;
     font-weight: 500;
     font-size: 1.25rem;
   }
@@ -1324,11 +1405,11 @@ footer {
     margin-top: -35px;
   }
   #WORK h3 {
-    -webkit-writing-mode: vertical-lr;
-        -ms-writing-mode: tb-lr;
-            writing-mode: vertical-lr;
+    -ms-writing-mode: tb-lr;
+        writing-mode: vertical-lr;
     -webkit-text-orientation: upright;
     text-orientation: upright;
+    -webkit-writing-mode: vertical-lr;
     font-weight: 500;
     font-size: 1.25rem;
   }
@@ -1494,11 +1575,11 @@ footer {
     margin-top: -35px;
   }
   #WORK h3 {
-    -webkit-writing-mode: vertical-lr;
-        -ms-writing-mode: tb-lr;
-            writing-mode: vertical-lr;
+    -ms-writing-mode: tb-lr;
+        writing-mode: vertical-lr;
     -webkit-text-orientation: upright;
     text-orientation: upright;
+    -webkit-writing-mode: vertical-lr;
     font-weight: 500;
     font-size: 1.25rem;
   }
