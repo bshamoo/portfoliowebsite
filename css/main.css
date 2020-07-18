@@ -345,13 +345,6 @@ section .title-line {
   -ms-writing-mode: tb-lr;
       writing-mode: vertical-lr;
   -webkit-writing-mode: vertical-lr;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
   font-weight: 500;
   font-size: 1.5rem;
 }
@@ -702,7 +695,7 @@ footer {
     text-orientation: upright;
     -webkit-writing-mode: vertical-lr;
     font-weight: 500;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
   }
   #WORK .card-deck {
     width: 70% !important;
