@@ -247,13 +247,15 @@ section .title-line {
 
 #ABOUT p {
     font-size: 16px;
-    margin-top: -35px;
-    background-color: rgba(0, 0, 0, 0.2);
+    margin-top: -15px;
+    background-color: rgba(0, 0, 0, 0.1);
+    text-align: justify;
 }
 
 #WORK .card-deck {
     margin-top: 20px;
     width: 50% !important;
+    text-align: justify;
 }
 
 
@@ -266,6 +268,7 @@ section .title-line {
     -webkit-text-orientation: upright;
     writing-mode: vertical-lr;
     -webkit-writing-mode: vertical-lr;
+    text-align: justify;
     font-weight: 500;
     font-size: 1.5rem;
 }
@@ -464,7 +467,6 @@ footer {
     height: 69.5px;
     width: 100vw;
     z-index: 1;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -592,7 +594,6 @@ footer {
 
     #ABOUT .container-fluid {
         background-color: rgba(35, 35, 35, 0.75);
-        padding-bottom: 100px;
     }
 
     section .sec-bg{
@@ -756,7 +757,6 @@ footer {
     height: 69.5px;
     width: 100vw;
     z-index: 1;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -883,7 +883,6 @@ footer {
 
     #ABOUT .container-fluid {
         background-color: rgba(35, 35, 35, 0.75);
-        padding-bottom: 70px;
     }
 
     section .sec-bg{
@@ -1048,7 +1047,6 @@ footer {
     height: 72.5px;
     width: 100vw;
     z-index: 1;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -1119,7 +1117,7 @@ footer {
     }
 
     #CONTACT{
-        padding-bottom: 20px;
+        padding-bottom: 30px;
     }
 
     section h1  {
@@ -1142,7 +1140,6 @@ footer {
 
     #ABOUT .container-fluid {
         background-color: rgba(35, 35, 35, 0.75);
-        padding-bottom: 70px;
     }
 
     section .sec-bg{
@@ -1290,30 +1287,51 @@ footer {
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) and (max-width: 1199.98px) and (-webkit-min-device-pixel-ratio: 1) {
     html {
-        overflow-x: hidden;
+        background-color: rgba(35, 35, 35, 1);
     }
-    
+
     #left, #right {
         top: 0; bottom: 0;
-        width: 45px;
+        width: 0px;
         }
         #left { left: 0; }
         #right { right: 0; }
-    #top, #bottom {
+    	
+    #top{
         left: 0; right: 0;
-        height: 45px;
+        height: 0px;
+        }
+    #bottom {
+        left: 0; right: 0;
+        height: 0px;
         }
         #top { top: 0; }
         #bottom { bottom: 0; }
 
+    #navtop {
+        background-color: rgb(30, 30, 30);
+        background-attachment: scroll;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        position: fixed;
+        z-index: 1;
+        }	
+        #navtop{
+            left: 0px; right: 0px;
+            height: 70px;
+            }
+            #navtop { top: 0; }
 
     #square {
     position: fixed;
-    right: 45px;
-    top: 45px;
-    height: 75px;
-    width: 75px;
-    z-index: 2;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    height: 72.5px;
+    width: 100vw;
+    z-index: 1;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -1321,8 +1339,9 @@ footer {
     }
 
     header .navbar-brand img{
-        width: 105px; 
-        height: 70px;
+        width: 90px; 
+        height: 60px;
+        padding: 5px;
     }
 
     header .navbar {
@@ -1330,14 +1349,12 @@ footer {
     }
 
     header .navbar-nav:last-child {
-        margin-right: 0.4rem;
+        margin-right: 0rem;
     }
 
     header .nav-item{
-        padding: 5px;
-        font-weight: 500;
-        font-size: 0.9rem;
-        margin-bottom: 0.7rem;
+        font-size: 0.8rem;
+        margin-bottom: -0.5rem;
     }
 
     header .navbar-brand{
@@ -1358,8 +1375,25 @@ footer {
     margin-top: 12px;
     }
 
+    section {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        min-height: 50vh;
+    }
+
     #HOME {
-        margin-bottom: -100px;
+        padding-top: 4.75rem;
+        padding-bottom: 0px;
+        min-height: 100vh; 
+    }
+
+    #ABOUT{
+        padding-top: 70px;
+        padding-bottom: 0px;
+    }
+
+    #CONTACT{
+        padding-bottom: 30px;
     }
 
     #HOME .title-line {
@@ -1395,15 +1429,62 @@ footer {
         font-size: 26px;
     }
 
+
+    #ABOUT .container-fluid{
+        //background-image: linear-gradient(180deg, rgba(33, 212, 253, 0.75), rgba(74, 164, 254, 0.75));
+        background-color: rgba(35, 35, 35, 0.75);
+    }
+
+    #WORK{
+        //background-image: linear-gradient(180deg, rgba(74, 164, 254, 0.75), rgba(107, 124, 254, 0.75));
+        background-color: rgba(35, 35, 35, 0.75);
+    }
+
+    #RESUME{
+        //background-image: linear-gradient(180deg, rgba(107, 124, 254, 0.75), rgba(140, 84, 254, 0.75));
+        background-color: rgba(35, 35, 35, 0.75);
+    }
+
+
+    #CONTACT{
+        //background-image: linear-gradient(180deg, rgba(140, 84, 254, 0.75), rgba(183, 33, 255, 0.75));
+        background-color: rgba(35, 35, 35, 0.75);
+    }
+
+
+    section .sec-bg{
+        width: 100vw;
+        height: 85px;
+        background-color: rgba(30, 30, 30, 1);
+        position: absolute;
+    }
+
     #ABOUT img {
-        margin-top: -30px;
-        width: 210px;
-        height: 350px;
+        margin-top: -40px;
+        width: 200px;
+        height: 335px;
     } 
 
-    #ABOUT p {
+    #ABOUT .title-bg{
+        background: linear-gradient(0deg, rgba(30, 30, 30, 1), rgba(24, 125, 233, 0.75));
+        position: absolute;
+        height: 200px;
+        width: 200px;
+        left: 0; 
+        right: 0; 
+        margin-left: auto; 
+        margin-right: auto;
+        border-radius: 50%;
+    }
+
+    #ABOUT p{
         font-size: 12px;
-        margin-top: -35px;
+        //margin-top: -35px;
+    }
+
+      
+    #WORK .card-deck {
+        width: 70% !important;
     }
 
     #WORK h3 {
@@ -1442,7 +1523,7 @@ footer {
 
     #RESUME embed {
         width: 450px;
-        height: 425px;
+        height: 405px;
     }
     
     #CONTACT i {
@@ -1465,22 +1546,24 @@ footer {
     }
 
     footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
+        position: absolute;
+        bottom: 0px;
         width: 100%;
+        height: 1.5rem; 
         color: #FEFEFE;
         text-align: center;
         font-size: 0.55rem;
         letter-spacing: 0px;
-        margin-bottom: -5px;
-        z-index: 100000000;
+        background-color: var(--contact-color);
+    }
+
+    footer p{
+        padding-top: 5px;
     }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) { 
-    
     html {
         overflow-x: hidden;
     }
