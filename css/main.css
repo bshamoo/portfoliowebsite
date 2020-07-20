@@ -334,7 +334,6 @@ section .title-line {
 #WORK .card-deck {
   margin-top: 20px;
   width: 50% !important;
-  text-align: justify;
 }
 
 #WORK .title-line {
@@ -347,7 +346,6 @@ section .title-line {
   -ms-writing-mode: tb-lr;
       writing-mode: vertical-lr;
   -webkit-writing-mode: vertical-lr;
-  text-align: justify;
   font-weight: 500;
   font-size: 1.5rem;
 }
