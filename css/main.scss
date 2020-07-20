@@ -367,6 +367,10 @@ section .title-line {
     background-color: rgb(34, 96, 184);
 }
 
+#RESUME embed {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
 
 #CONTACT .title-line {
     background-color: var(--contact-color);

@@ -446,6 +446,11 @@ section .title-line {
   background-color: #2260b8;
 }
 
+#RESUME embed {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
 #CONTACT .title-line {
   background-color: var(--contact-color);
 }
