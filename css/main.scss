@@ -1,9 +1,9 @@
 :root{
     --home-color: #1e90ff;
-    --about-color: rgb(24, 125, 233);
-    --work-color: rgb(18, 106, 210);
-    --resume-color: rgb(12, 86, 188);
-    --contact-color: rgb(6, 67, 165);
+    --about-color: #187de9;
+    --work-color: #126ad2;
+    --resume-color: #0c56bc;
+    --contact-color: #0643a5;
 }
 
 * {
@@ -16,52 +16,11 @@
     min-height:100%;
     position:relative;
     height:100%;
- }
-
-
-#top, #bottom, #left, #right {
-    background-repeat: no-repeat, no-repeat;
-    background-position: center, center;
-	background-attachment: fixed, fixed;
-    background-size: cover, cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    position: fixed;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    }
-	#left, #right {
-		top: 0; bottom: 0;
-		width: 50px;
-		}
-		#left { left: 0; }
-		#right { right: 0; }	
-	#top, #bottom {
-		left: 0; right: 0;
-		height: 50px;
-		}
-		#top { top: 0; }
-        #bottom { bottom: 0; }
-
-
-#square {
-    position: fixed;
-    right: 50px;
-    top: 50px;
-    height: 80px;
-    width: 80px;
-    z-index: 2;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
 }
 
 html {
     scroll-behavior: smooth;
+    background-color: rgb(30, 30, 30);
 }
 
 html, body {
@@ -74,13 +33,64 @@ html, body {
 }
 
 
-header .navbar {
-    padding: 0rem 0.45rem;
-}
+#navtop {
+    background-color: rgb(30, 30, 30);
+    background-attachment: scroll;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    position: fixed;
+    z-index: 1;
+    }	
+    #navtop{
+        left: 0px; right: 0px;
+        height: 73px;
+        }
+        #navtop { top: 0; }
 
-header li{
-    list-style: none;
-}
+    #square {
+    position: fixed;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    height: 75.5px;
+    width: 100vw;
+    z-index: 1;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    }
+
+    @-webkit-keyframes AnimationName {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @-moz-keyframes AnimationName {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @-o-keyframes AnimationName {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @keyframes AnimationName {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+
+    header .navbar {
+        padding: 0rem 0.45rem;
+    }
+
+    header li{
+        list-style: none;
+    }
 
 header a{
     font-family: 'Roboto', sans-serif;
@@ -107,11 +117,17 @@ header .navbar-nav:last-child {
 header .nav-item{
     padding: 5px;
     font-weight: 500;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0rem;
 }
 
 header .navbar-brand{
     margin-left: 1.75rem;
+}
+
+header .navbar-brand img{
+    width: 100px; 
+    height: 65px;
+    padding: 5px;
 }
 
 #top-menu li.active #about, header .about:hover{
@@ -150,10 +166,12 @@ body{
 
 section{
     color: #FEFEFE;
-    min-height: 100vh;
     display: flex;
     font-style: normal;
-    width: 100%
+    width: 100%;
+    padding-top: 75.5px;
+    padding-bottom: 70px;
+    min-height: 100vh;
 }
 
 section h1  {
@@ -168,6 +186,53 @@ section .title-line {
     margin: auto;
     margin-bottom: 30px;
     margin-top: 12px;
+}
+
+#HOME {
+    padding-top: 4.75rem;
+    padding-bottom: 0px;
+    min-height: 100vh; 
+}
+
+#ABOUT{
+    padding-top: 75.5px;
+    padding-bottom: 0px;
+}
+
+#WORK #work-info{
+    margin-top: 75px;
+}
+
+#RESUME #resume-info {
+    margin-top: 75px;
+}
+
+#CONTACT #contact-info {
+    margin-top: 75px;
+}
+
+#WORK, #RESUME, #CONTACT, #ABOUT .container-fluid{
+    background-color: rgba(35, 35, 35, 0.75);
+}
+
+section .sec-bg{
+    width: 100%;
+    height: 94px;
+    background-color: rgba(30, 30, 30, 1);
+    position: absolute;
+}
+
+#ABOUT .title-bg{
+    margin-top: 30px;
+    background: linear-gradient(0deg, rgba(30, 30, 30, 1), rgba(24, 125, 233, 0.75));
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
+    border-radius: 50%;
 }
 
 #HOME h1{
@@ -370,6 +435,11 @@ section .title-line {
 #RESUME embed {
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
+    background-color: white;
+}
+
+#RESUME .badge {
+    padding: 70px;
 }
 
 #CONTACT .title-line {
@@ -409,70 +479,31 @@ section .title-line {
     transition: all 0.3s ease;
 }
 
+
 footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
+    position: absolute;
+    bottom: 0px;
     width: 100%;
+    height: 0rem; 
     color: #FEFEFE;
     text-align: center;
     font-size: 0.75rem;
     letter-spacing: 0px;
 }
 
+footer p{
+    padding-top: 5px;
+}
+
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) and (-webkit-min-device-pixel-ratio: 1) {
-    
-    html {
-        background-color: rgba(35, 35, 35, 1);
+	
+    #navtop{
+        height: 67px;
     }
 
-    #left, #right {
-        top: 0; bottom: 0;
-        width: 0px;
-        }
-        #left { left: 0; }
-        #right { right: 0; }
-    	
-    #top{
-        left: 0; right: 0;
-        height: 0px;
-        }
-    #bottom {
-        left: 0; right: 0;
-        height: 0px;
-        }
-        #top { top: 0; }
-        #bottom { bottom: 0; }
-
-    #navtop {
-        background-color: rgb(30, 30, 30);
-        background-attachment: scroll;
-        background-size: cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        position: fixed;
-        z-index: 1;
-        }	
-        #navtop{
-            left: 0px; right: 0px;
-            height: 67px;
-            }
-            #navtop { top: 0; }
-
     #square {
-    position: fixed;
-    right: 0px;
-    left: 0px;
-    top: 0px;
-    height: 69.5px;
-    width: 100vw;
-    z-index: 1;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+        height: 69.5px;
     }
 
     header .navbar-brand{
@@ -521,7 +552,6 @@ footer {
         letter-spacing: 1px;
     }
 
-
     section {
         padding-top: 70px;
         padding-bottom: 70px;
@@ -541,6 +571,14 @@ footer {
 
     #CONTACT{
         padding-bottom: 0px;
+    }
+
+    #ABOUT #about-info, #WORK #work-info, #RESUME #resume-info {
+        margin-top: 30px;
+    }
+
+    #CONTACT #contact-info {
+        margin-top: 0px;
     }
 
     section h1  {
@@ -565,7 +603,6 @@ footer {
     #HOME h1{
         font-weight: 900;
         font-size: 3.25rem;
-        color: white;
     }
 
     #HOME .wordCarousel {
@@ -590,16 +627,8 @@ footer {
         font-size: 22px;
     }
 
-    #WORK, #CONTACT, #RESUME {
-        background-color: rgba(35, 35, 35, 0.75);
-    }
-
-    #ABOUT .container-fluid {
-        background-color: rgba(35, 35, 35, 0.75);
-    }
-
     section .sec-bg{
-        width: 100vw;
+        width: 100%;
         height: 74px;
         background-color: rgba(30, 30, 30, 1);
         position: absolute;
@@ -607,6 +636,7 @@ footer {
 
 
     #ABOUT .title-bg{
+        margin-top: 0px;
         background: linear-gradient(0deg, rgba(30, 30, 30, 1), rgba(24, 125, 233, 0.75));
         position: absolute;
         height: 150px;
@@ -627,7 +657,7 @@ footer {
 
     #ABOUT p {
         font-size: 11px;
-        margin-top: -35px;
+        margin-top: -30px;
     }
 
     #WORK h3 {
@@ -675,7 +705,7 @@ footer {
 
     #RESUME embed {
         width: 225px;
-        height: 325px;
+        height: 315px;
         background-color: white;
     }
 
@@ -696,74 +726,22 @@ footer {
     }
 
     footer {
-        position: absolute;
         bottom: 0px;
-        width: 100%;
         height: 1.5rem; 
-        color: #FEFEFE;
-        text-align: center;
         font-size: 0.55rem;
-        letter-spacing: 0px;
         background-color: var(--contact-color);
-    }
-
-    footer p{
-        padding-top: 5px;
     }
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) and (max-width: 767.98px) and (-webkit-min-device-pixel-ratio: 1) {
-    html {
-        background-color: rgba(35, 35, 35, 1);
-    }
-
-    #left, #right {
-        top: 0; bottom: 0;
-        width: 0px;
-        }
-        #left { left: 0; }
-        #right { right: 0; }
-    	
-    #top{
-        left: 0; right: 0;
-        height: 0px;
-        }
-    #bottom {
-        left: 0; right: 0;
-        height: 0px;
-        }
-        #top { top: 0; }
-        #bottom { bottom: 0; }
 
     #navtop {
-        background-color: rgb(30, 30, 30);
-        background-attachment: scroll;
-        background-size: cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        position: fixed;
-        z-index: 1;
-        }	
-        #navtop{
-            left: 0px; right: 0px;
-            height: 67px;
-            }
-            #navtop { top: 0; }
+        height: 67px;
+    }
 
     #square {
-    position: fixed;
-    right: 0px;
-    left: 0px;
-    top: 0px;
-    height: 69.5px;
-    width: 100vw;
-    z-index: 1;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+        height: 69.5px;
     }
 
     header .navbar-brand{
@@ -833,6 +811,14 @@ footer {
         padding-bottom: 0px;
     }
 
+    #ABOUT #about-info, #WORK #work-info, #RESUME #resume-info {
+        margin-top: 15px;
+    }
+
+    #CONTACT #contact-info {
+        margin-top: 0px;
+    }
+
     section h1  {
         font-weight: 700;
         font-size: 2.5rem;
@@ -880,22 +866,15 @@ footer {
         font-size: 22px;
     }
 
-    #WORK, #CONTACT, #RESUME {
-        background-color: rgba(35, 35, 35, 0.75);
-    }
-
-    #ABOUT .container-fluid {
-        background-color: rgba(35, 35, 35, 0.75);
-    }
-
     section .sec-bg{
-        width: 100vw;
+        width: 100%;
         height: 74px;
         background-color: rgba(30, 30, 30, 1);
         position: absolute;
     }
 
     #ABOUT .title-bg{
+        margin-top: 0px;
         background: linear-gradient(0deg, rgba(30, 30, 30, 1), rgba(24, 125, 233, 0.75));
         position: absolute;
         height: 150px;
@@ -915,7 +894,7 @@ footer {
 
     #ABOUT p {
         font-size: 11px;
-        margin-top: -35px;
+        margin-top: -30px;
     }
 
     #WORK h3 {
@@ -928,7 +907,7 @@ footer {
     }
 
     #WORK .card-deck {
-        width: 100% !important;
+        width: 90% !important;
     }
 
     #WORK .card {
@@ -986,74 +965,22 @@ footer {
     }
 
     footer {
-        position: absolute;
         bottom: 0px;
-        width: 100%;
         height: 1.5rem; 
-        color: #FEFEFE;
-        text-align: center;
         font-size: 0.55rem;
-        letter-spacing: 0px;
         background-color: var(--contact-color);
-    }
-
-    footer p{
-        padding-top: 5px;
     }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) and (max-width: 991.98px) and (-webkit-min-device-pixel-ratio: 1) {
-    html {
-        background-color: rgba(35, 35, 35, 1);
+
+    #navtop{
+        height: 70px;
     }
 
-    #left, #right {
-        top: 0; bottom: 0;
-        width: 0px;
-        }
-        #left { left: 0; }
-        #right { right: 0; }
-    	
-    #top{
-        left: 0; right: 0;
-        height: 0px;
-        }
-    #bottom {
-        left: 0; right: 0;
-        height: 0px;
-        }
-        #top { top: 0; }
-        #bottom { bottom: 0; }
-
-    #navtop {
-        background-color: rgb(30, 30, 30);
-        background-attachment: scroll;
-        background-size: cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        position: fixed;
-        z-index: 1;
-        }	
-        #navtop{
-            left: 0px; right: 0px;
-            height: 70px;
-            }
-            #navtop { top: 0; }
-
     #square {
-    position: fixed;
-    right: 0px;
-    left: 0px;
-    top: 0px;
-    height: 72.5px;
-    width: 100vw;
-    z-index: 1;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+        height: 72.5px;
     }
 
     header .navbar-brand{
@@ -1105,7 +1032,7 @@ footer {
     section {
         padding-top: 70px;
         padding-bottom: 70px;
-        min-height: 50vh;
+        min-height: 70vh;
     }
 
     #HOME {
@@ -1123,6 +1050,14 @@ footer {
         padding-bottom: 30px;
     }
 
+    #ABOUT #about-info, #WORK #work-info, #RESUME #resume-info {
+        margin-top: 30px;
+    }
+
+    #CONTACT #contact-info {
+        margin-top: 30px;
+    }
+
     section h1  {
         font-weight: 700;
         font-size: 3.5rem;
@@ -1137,16 +1072,8 @@ footer {
     margin-top: 12px;
     }
 
-    #WORK, #CONTACT, #RESUME {
-        background-color: rgba(35, 35, 35, 0.75);
-    }
-
-    #ABOUT .container-fluid {
-        background-color: rgba(35, 35, 35, 0.75);
-    }
-
     section .sec-bg{
-        width: 100vw;
+        width: 100%;
         height: 95px;
         background-color: rgba(30, 30, 30, 1);
         position: absolute;
@@ -1186,6 +1113,7 @@ footer {
     }
 
     #ABOUT .title-bg{
+        margin-top: 0px;
         background: linear-gradient(0deg, rgba(30, 30, 30, 1), rgba(24, 125, 233, 0.75));
         position: absolute;
         height: 200px;
@@ -1271,74 +1199,22 @@ footer {
     }
 
     footer {
-        position: absolute;
         bottom: 0px;
-        width: 100%;
         height: 1.5rem; 
-        color: #FEFEFE;
-        text-align: center;
         font-size: 0.55rem;
-        letter-spacing: 0px;
         background-color: var(--contact-color);
-    }
-
-    footer p{
-        padding-top: 5px;
     }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) and (max-width: 1199.98px) and (-webkit-min-device-pixel-ratio: 1) {
-    html {
-        background-color: rgba(35, 35, 35, 1);
+
+    #navtop{
+        height: 70px;
     }
 
-    #left, #right {
-        top: 0; bottom: 0;
-        width: 0px;
-        }
-        #left { left: 0; }
-        #right { right: 0; }
-    	
-    #top{
-        left: 0; right: 0;
-        height: 0px;
-        }
-    #bottom {
-        left: 0; right: 0;
-        height: 0px;
-        }
-        #top { top: 0; }
-        #bottom { bottom: 0; }
-
-    #navtop {
-        background-color: rgb(30, 30, 30);
-        background-attachment: scroll;
-        background-size: cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        position: fixed;
-        z-index: 1;
-        }	
-        #navtop{
-            left: 0px; right: 0px;
-            height: 70px;
-            }
-            #navtop { top: 0; }
-
     #square {
-    position: fixed;
-    right: 0px;
-    left: 0px;
-    top: 0px;
-    height: 72.5px;
-    width: 100vw;
-    z-index: 1;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+        height: 72.5px;
     }
 
     header .navbar-brand img{
@@ -1381,7 +1257,7 @@ footer {
     section {
         padding-top: 70px;
         padding-bottom: 70px;
-        min-height: 50vh;
+        min-height: 70vh;
     }
 
     #HOME {
@@ -1397,6 +1273,14 @@ footer {
 
     #CONTACT{
         padding-bottom: 30px;
+    }
+
+    #ABOUT #about-info, #WORK #work-info, #RESUME #resume-info {
+        margin-top: 30px;
+    }
+
+    #CONTACT #contact-info {
+        margin-top: 10px;
     }
 
     #HOME .title-line {
@@ -1432,31 +1316,8 @@ footer {
         font-size: 26px;
     }
 
-
-    #ABOUT .container-fluid{
-        //background-image: linear-gradient(180deg, rgba(33, 212, 253, 0.75), rgba(74, 164, 254, 0.75));
-        background-color: rgba(35, 35, 35, 0.75);
-    }
-
-    #WORK{
-        //background-image: linear-gradient(180deg, rgba(74, 164, 254, 0.75), rgba(107, 124, 254, 0.75));
-        background-color: rgba(35, 35, 35, 0.75);
-    }
-
-    #RESUME{
-        //background-image: linear-gradient(180deg, rgba(107, 124, 254, 0.75), rgba(140, 84, 254, 0.75));
-        background-color: rgba(35, 35, 35, 0.75);
-    }
-
-
-    #CONTACT{
-        //background-image: linear-gradient(180deg, rgba(140, 84, 254, 0.75), rgba(183, 33, 255, 0.75));
-        background-color: rgba(35, 35, 35, 0.75);
-    }
-
-
     section .sec-bg{
-        width: 100vw;
+        width: 100%;
         height: 85px;
         background-color: rgba(30, 30, 30, 1);
         position: absolute;
@@ -1469,6 +1330,7 @@ footer {
     } 
 
     #ABOUT .title-bg{
+        margin-top: 0px;
         background: linear-gradient(0deg, rgba(30, 30, 30, 1), rgba(24, 125, 233, 0.75));
         position: absolute;
         height: 200px;
@@ -1482,7 +1344,6 @@ footer {
 
     #ABOUT p{
         font-size: 12px;
-        //margin-top: -35px;
     }
 
       
@@ -1549,58 +1410,28 @@ footer {
     }
 
     footer {
-        position: absolute;
         bottom: 0px;
-        width: 100%;
         height: 1.5rem; 
-        color: #FEFEFE;
-        text-align: center;
         font-size: 0.55rem;
-        letter-spacing: 0px;
         background-color: var(--contact-color);
-    }
-
-    footer p{
-        padding-top: 5px;
     }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) { 
-    html {
-        overflow-x: hidden;
-    }
     
-    #left, #right {
-        top: 0; bottom: 0;
-        width: 45px;
-        }
-        #left { left: 0; }
-        #right { right: 0; }
-    #top, #bottom {
-        left: 0; right: 0;
-        height: 45px;
-        }
-        #top { top: 0; }
-        #bottom { bottom: 0; }
-
+    #navtop {
+        height: 60px;
+    }
 
     #square {
-    position: fixed;
-    right: 45px;
-    top: 45px;
-    height: 75px;
-    width: 75px;
-    z-index: 2;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+        height: 62.5px;
     }
 
     header .navbar-brand img{
-        width: 95px; 
-        height: 60px;
+        width: 75px; 
+        height: 50px;
+        padding: 5px;
     }
 
     header .navbar {
@@ -1608,14 +1439,12 @@ footer {
     }
 
     header .navbar-nav:last-child {
-        margin-right: 0.4rem;
+        margin-right: 0rem;
     }
 
     header .nav-item{
-        padding: 5px;
-        font-weight: 500;
-        font-size: 0.8rem;
-        margin-bottom: 0.75rem;
+        font-size: 0.7rem;
+        margin-bottom: 0rem;
     }
 
     header .navbar-brand{
@@ -1634,6 +1463,35 @@ footer {
     margin: auto;
     margin-bottom: 30px;
     margin-top: 12px;
+    }
+
+    section {
+        padding-top: 62.5px;
+        padding-bottom: 70px;
+        min-height: 100vh;
+    }
+
+    #HOME {
+        padding-top: 4.75rem;
+        padding-bottom: 0px;
+        min-height: 100vh; 
+    }
+
+    #ABOUT{
+        padding-top: 62.5px;
+        padding-bottom: 0px;
+    }
+
+    #CONTACT{
+        padding-bottom: 30px;
+    }
+
+    #ABOUT #about-info, #WORK #work-info, #RESUME #resume-info {
+        margin-top: 30px;
+    }
+
+    #CONTACT #contact-info {
+        margin-top: 30px;
     }
 
     #HOME .title-line {
@@ -1668,7 +1526,26 @@ footer {
     #HOME .btn-orange {
         font-size: 26px;
     }
-   
+
+    section .sec-bg{
+        width: 100%;
+        height: 85px;
+        background-color: rgba(30, 30, 30, 1);
+        position: absolute;
+    }
+
+    #ABOUT .title-bg{
+        margin-top: 0px;
+        background: linear-gradient(0deg, rgba(30, 30, 30, 1), rgba(24, 125, 233, 0.75));
+        position: absolute;
+        height: 200px;
+        width: 200px;
+        left: 0; 
+        right: 0; 
+        margin-left: auto; 
+        margin-right: auto;
+        border-radius: 50%;
+    }
 
     #ABOUT img {
         margin-top: -30px;
@@ -1676,9 +1553,8 @@ footer {
         height: 350px;
     } 
 
-    #ABOUT p {
+    #ABOUT p{
         font-size: 12px;
-        margin-top: -35px;
     }
 
     #WORK h3 {
@@ -1695,8 +1571,7 @@ footer {
         height: 50vh;
         object-fit: cover;
     }
-
-    
+   
     #WORK .card-deck {
         width: 70% !important;
     }
@@ -1745,15 +1620,8 @@ footer {
     }
 
     footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        color: #FEFEFE;
-        text-align: center;
-        font-size: 0.6rem;
-        letter-spacing: 0px;
-        margin-bottom: -5px;
-        z-index: 100000000;
+        bottom: 0px;
+        height: 1.5rem; 
+        font-size: 0.55rem;
     }
 }

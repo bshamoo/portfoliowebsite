@@ -37,40 +37,45 @@ $(window).scroll(function(){
 
 // Square Color Change Bind Based on Active Class
 $(document).ready(function() {
-    var home_color = 'rgb(30, 144, 255)';
-    var home_bg = 'linear-gradient(0deg, rgba(22, 22, 22, 0.4),  rgba(22, 22, 22, 0.4)), linear-gradient(0deg, rgba(30, 144, 255, 0.6),  rgba(30, 144, 255, 0.6)), url("css/BlurBackground.gif")';
-    var about_color = 'rgb(24, 125, 233)';
-    var about_bg = 'linear-gradient(0deg, rgba(22, 22, 22, 0.4),  rgba(22, 22, 22, 0.4)), linear-gradient(0deg, rgba(24, 125, 233, 0.6),  rgba(24, 125, 233, 0.6)), url("css/BlurBackground.gif")';
-    var work_color = 'rgb(18, 106, 210)';
-    var work_bg = 'linear-gradient(0deg, rgba(22, 22, 22, 0.4),  rgba(22, 22, 22, 0.4)), linear-gradient(0deg, rgba(18, 106, 210, 0.6),  rgba(18, 106, 210, 0.6)), url("css/BlurBackground.gif")';
-    var resume_color = 'rgb(12, 86, 188)';
-    var resume_bg = 'linear-gradient(0deg, rgba(22, 22, 22, 0.4),  rgba(22, 22, 22, 0.4)), linear-gradient(0deg, rgba(12, 86, 188, 0.6),  rgba(12, 86, 188, 0.6)), url("css/BlurBackground.gif")';
-    var contact_color = 'rgb(6, 67, 165)';
-    var contact_bg = 'linear-gradient(0deg, rgba(22, 22, 22, 0.4),  rgba(22, 22, 22, 0.4)), linear-gradient(0deg, rgba(6, 67, 165, 0.6),  rgba(6, 67, 165, 0.6)), url("css/BlurBackground.gif")';
-    
-    $("#square").css('background-color', home_color);
-    $("#top, #bottom, #left, #right").css('background-image', home_bg);
+    var home_color = 'linear-gradient(270deg, #ff1e1e, #1e90ff)';
+    var about_color = 'linear-gradient(270deg, #e91818, #187de9)';
+    var work_color = 'linear-gradient(270deg, #d21212, #126ad2)';
+    var resume_color = 'linear-gradient(270deg, #bc0c0c, #0c56bc)';
+    var contact_color = 'linear-gradient(270deg, #a50606, #0643a5)';
+
+    //var home_color = 'linear-gradient(270deg, #1effe4, #1e90ff)';
+    //var about_color = 'linear-gradient(270deg, #18e9d0, #187de9)';
+    //var work_color = 'linear-gradient(270deg, #12d2bb, #126ad2)';
+    //var resume_color = 'linear-gradient(270deg, #0cbca7, #0c56bc)';
+    //var contact_color = 'linear-gradient(270deg, #06a58b, #0643a5)';
+
+    $("#square").css('background', home_color);
+    $("#square").css('background-size', '400% 400%');
+        $("#square").css('-webkit-animation', 'AnimationName 12s ease infinite')
+        $("#square").css('-moz-animation', 'AnimationName 12s ease infinite')
+        $("#square").css('-o-animation', 'AnimationName 12s ease infinite')
+        $("#square").css('animation', 'AnimationName 12s ease infinite')
     $(window).scroll(function(){
         if ($('li.nav-home').hasClass('active')) {
-            $("#square").css('background-color', home_color);
-            $("#top, #bottom, #left, #right").css('background-image', home_bg);
+          $("#square").css('background', home_color);
         }
         if($('li.nav-about').hasClass('active')) {
-            $("#square").css('background-color', about_color);
-            $("#top, #bottom, #left, #right").css('background-image', about_bg);
+          $("#square").css('background', about_color);
         }
         else if($('li.nav-work').hasClass('active')) {
-            $("#square").css('background-color', work_color);
-            $("#top, #bottom, #left, #right").css('background-image', work_bg);
+          $("#square").css('background', work_color);
         }
         else if($('li.nav-resume').hasClass('active')) {
-            $("#square").css('background-color', resume_color);
-            $("#top, #bottom, #left, #right").css('background-image', resume_bg);
+          $("#square").css('background', resume_color);
         }
         else if($('li.nav-contact').hasClass('active')) {
-            $("#square").css('background-color', contact_color);
-            $("#top, #bottom, #left, #right").css('background-image', contact_bg);
+          $("#square").css('background', contact_color);
         }
+        $("#square").css('background-size', '400% 400%');
+        $("#square").css('-webkit-animation', 'AnimationName 15s ease infinite')
+        $("#square").css('-moz-animation', 'AnimationName 15s ease infinite')
+        $("#square").css('-o-animation', 'AnimationName 15s ease infinite')
+        $("#square").css('animation', 'AnimationName 15s ease infinite')
     });
 });
 

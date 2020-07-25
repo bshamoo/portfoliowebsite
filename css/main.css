@@ -1,9 +1,9 @@
 :root {
   --home-color: #1e90ff;
-  --about-color: rgb(24, 125, 233);
-  --work-color: rgb(18, 106, 210);
-  --resume-color: rgb(12, 86, 188);
-  --contact-color: rgb(6, 67, 165);
+  --about-color: #187de9;
+  --work-color: #126ad2;
+  --resume-color: #0c56bc;
+  --contact-color: #0643a5;
 }
 
 * {
@@ -19,60 +19,9 @@
   height: 100%;
 }
 
-#top, #bottom, #left, #right {
-  background-repeat: no-repeat, no-repeat;
-  background-position: center, center;
-  background-attachment: fixed, fixed;
-  background-size: cover, cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  position: fixed;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-#left, #right {
-  top: 0;
-  bottom: 0;
-  width: 50px;
-}
-
-#left {
-  left: 0;
-}
-
-#right {
-  right: 0;
-}
-
-#top, #bottom {
-  left: 0;
-  right: 0;
-  height: 50px;
-}
-
-#top {
-  top: 0;
-}
-
-#bottom {
-  bottom: 0;
-}
-
-#square {
-  position: fixed;
-  right: 50px;
-  top: 50px;
-  height: 80px;
-  width: 80px;
-  z-index: 2;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
 html {
   scroll-behavior: smooth;
+  background-color: #1e1e1e;
 }
 
 html, body {
@@ -86,6 +35,63 @@ html, body {
           align-items: center;
   text-align: center;
   position: relative;
+}
+
+#navtop {
+  background-color: #1e1e1e;
+  background-attachment: scroll;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  position: fixed;
+  z-index: 1;
+}
+
+#navtop {
+  left: 0px;
+  right: 0px;
+  height: 73px;
+}
+
+#navtop {
+  top: 0;
+}
+
+#square {
+  position: fixed;
+  right: 0px;
+  left: 0px;
+  top: 0px;
+  height: 75.5px;
+  width: 100vw;
+  z-index: 1;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 header .navbar {
@@ -121,11 +127,17 @@ header .navbar-nav:last-child {
 header .nav-item {
   padding: 5px;
   font-weight: 500;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0rem;
 }
 
 header .navbar-brand {
   margin-left: 1.75rem;
+}
+
+header .navbar-brand img {
+  width: 100px;
+  height: 65px;
+  padding: 5px;
 }
 
 #top-menu li.active #about, header .about:hover {
@@ -168,12 +180,14 @@ body {
 
 section {
   color: #FEFEFE;
-  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   font-style: normal;
   width: 100%;
+  padding-top: 75.5px;
+  padding-bottom: 70px;
+  min-height: 100vh;
 }
 
 section h1 {
@@ -188,6 +202,54 @@ section .title-line {
   margin: auto;
   margin-bottom: 30px;
   margin-top: 12px;
+}
+
+#HOME {
+  padding-top: 4.75rem;
+  padding-bottom: 0px;
+  min-height: 100vh;
+}
+
+#ABOUT {
+  padding-top: 75.5px;
+  padding-bottom: 0px;
+}
+
+#WORK #work-info {
+  margin-top: 75px;
+}
+
+#RESUME #resume-info {
+  margin-top: 75px;
+}
+
+#CONTACT #contact-info {
+  margin-top: 75px;
+}
+
+#WORK, #RESUME, #CONTACT, #ABOUT .container-fluid {
+  background-color: rgba(35, 35, 35, 0.75);
+}
+
+section .sec-bg {
+  width: 100%;
+  height: 94px;
+  background-color: #1e1e1e;
+  position: absolute;
+}
+
+#ABOUT .title-bg {
+  margin-top: 30px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#1e1e1e), to(rgba(24, 125, 233, 0.75)));
+  background: linear-gradient(0deg, #1e1e1e, rgba(24, 125, 233, 0.75));
+  position: absolute;
+  height: 250px;
+  width: 250px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
 }
 
 #HOME h1 {
@@ -449,6 +511,11 @@ section .title-line {
 #RESUME embed {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
+  background-color: white;
+}
+
+#RESUME .badge {
+  padding: 70px;
 }
 
 #CONTACT .title-line {
@@ -488,75 +555,26 @@ section .title-line {
 }
 
 footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
+  position: absolute;
+  bottom: 0px;
   width: 100%;
+  height: 0rem;
   color: #FEFEFE;
   text-align: center;
   font-size: 0.75rem;
   letter-spacing: 0px;
 }
 
+footer p {
+  padding-top: 5px;
+}
+
 @media (max-width: 575.98px) and (-webkit-min-device-pixel-ratio: 1) {
-  html {
-    background-color: #232323;
-  }
-  #left, #right {
-    top: 0;
-    bottom: 0;
-    width: 0px;
-  }
-  #left {
-    left: 0;
-  }
-  #right {
-    right: 0;
-  }
-  #top {
-    left: 0;
-    right: 0;
-    height: 0px;
-  }
-  #bottom {
-    left: 0;
-    right: 0;
-    height: 0px;
-  }
-  #top {
-    top: 0;
-  }
-  #bottom {
-    bottom: 0;
-  }
   #navtop {
-    background-color: #1e1e1e;
-    background-attachment: scroll;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    position: fixed;
-    z-index: 1;
-  }
-  #navtop {
-    left: 0px;
-    right: 0px;
     height: 67px;
   }
-  #navtop {
-    top: 0;
-  }
   #square {
-    position: fixed;
-    right: 0px;
-    left: 0px;
-    top: 0px;
     height: 69.5px;
-    width: 100vw;
-    z-index: 1;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
   }
   header .navbar-brand {
     margin-left: -0.25rem;
@@ -617,6 +635,12 @@ footer {
   #CONTACT {
     padding-bottom: 0px;
   }
+  #ABOUT #about-info, #WORK #work-info, #RESUME #resume-info {
+    margin-top: 30px;
+  }
+  #CONTACT #contact-info {
+    margin-top: 0px;
+  }
   section h1 {
     font-weight: 700;
     font-size: 2.5rem;
@@ -636,7 +660,6 @@ footer {
   #HOME h1 {
     font-weight: 900;
     font-size: 3.25rem;
-    color: white;
   }
   #HOME .wordCarousel {
     font-size: 24px;
@@ -658,19 +681,14 @@ footer {
   #HOME .btn-orange {
     font-size: 22px;
   }
-  #WORK, #CONTACT, #RESUME {
-    background-color: rgba(35, 35, 35, 0.75);
-  }
-  #ABOUT .container-fluid {
-    background-color: rgba(35, 35, 35, 0.75);
-  }
   section .sec-bg {
-    width: 100vw;
+    width: 100%;
     height: 74px;
     background-color: #1e1e1e;
     position: absolute;
   }
   #ABOUT .title-bg {
+    margin-top: 0px;
     background: -webkit-gradient(linear, left bottom, left top, from(#1e1e1e), to(rgba(24, 125, 233, 0.75)));
     background: linear-gradient(0deg, #1e1e1e, rgba(24, 125, 233, 0.75));
     position: absolute;
@@ -689,7 +707,7 @@ footer {
   }
   #ABOUT p {
     font-size: 11px;
-    margin-top: -35px;
+    margin-top: -30px;
   }
   #WORK h3 {
     -ms-writing-mode: tb-lr;
@@ -731,7 +749,7 @@ footer {
   }
   #RESUME embed {
     width: 225px;
-    height: 325px;
+    height: 315px;
     background-color: white;
   }
   #CONTACT i {
@@ -748,80 +766,19 @@ footer {
     margin-top: -35px;
   }
   footer {
-    position: absolute;
     bottom: 0px;
-    width: 100%;
     height: 1.5rem;
-    color: #FEFEFE;
-    text-align: center;
     font-size: 0.55rem;
-    letter-spacing: 0px;
     background-color: var(--contact-color);
-  }
-  footer p {
-    padding-top: 5px;
   }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) and (-webkit-min-device-pixel-ratio: 1) {
-  html {
-    background-color: #232323;
-  }
-  #left, #right {
-    top: 0;
-    bottom: 0;
-    width: 0px;
-  }
-  #left {
-    left: 0;
-  }
-  #right {
-    right: 0;
-  }
-  #top {
-    left: 0;
-    right: 0;
-    height: 0px;
-  }
-  #bottom {
-    left: 0;
-    right: 0;
-    height: 0px;
-  }
-  #top {
-    top: 0;
-  }
-  #bottom {
-    bottom: 0;
-  }
   #navtop {
-    background-color: #1e1e1e;
-    background-attachment: scroll;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    position: fixed;
-    z-index: 1;
-  }
-  #navtop {
-    left: 0px;
-    right: 0px;
     height: 67px;
   }
-  #navtop {
-    top: 0;
-  }
   #square {
-    position: fixed;
-    right: 0px;
-    left: 0px;
-    top: 0px;
     height: 69.5px;
-    width: 100vw;
-    z-index: 1;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
   }
   header .navbar-brand {
     margin-left: -0.25rem;
@@ -882,6 +839,12 @@ footer {
   #CONTACT {
     padding-bottom: 0px;
   }
+  #ABOUT #about-info, #WORK #work-info, #RESUME #resume-info {
+    margin-top: 15px;
+  }
+  #CONTACT #contact-info {
+    margin-top: 0px;
+  }
   section h1 {
     font-weight: 700;
     font-size: 2.5rem;
@@ -923,19 +886,14 @@ footer {
   #HOME .btn-orange {
     font-size: 22px;
   }
-  #WORK, #CONTACT, #RESUME {
-    background-color: rgba(35, 35, 35, 0.75);
-  }
-  #ABOUT .container-fluid {
-    background-color: rgba(35, 35, 35, 0.75);
-  }
   section .sec-bg {
-    width: 100vw;
+    width: 100%;
     height: 74px;
     background-color: #1e1e1e;
     position: absolute;
   }
   #ABOUT .title-bg {
+    margin-top: 0px;
     background: -webkit-gradient(linear, left bottom, left top, from(#1e1e1e), to(rgba(24, 125, 233, 0.75)));
     background: linear-gradient(0deg, #1e1e1e, rgba(24, 125, 233, 0.75));
     position: absolute;
@@ -954,7 +912,7 @@ footer {
   }
   #ABOUT p {
     font-size: 11px;
-    margin-top: -35px;
+    margin-top: -30px;
   }
   #WORK h3 {
     -ms-writing-mode: tb-lr;
@@ -966,7 +924,7 @@ footer {
     font-size: 0.65rem;
   }
   #WORK .card-deck {
-    width: 100% !important;
+    width: 90% !important;
   }
   #WORK .card {
     margin-top: 10px !important;
@@ -1014,80 +972,19 @@ footer {
     margin-top: -35px;
   }
   footer {
-    position: absolute;
     bottom: 0px;
-    width: 100%;
     height: 1.5rem;
-    color: #FEFEFE;
-    text-align: center;
     font-size: 0.55rem;
-    letter-spacing: 0px;
     background-color: var(--contact-color);
-  }
-  footer p {
-    padding-top: 5px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) and (-webkit-min-device-pixel-ratio: 1) {
-  html {
-    background-color: #232323;
-  }
-  #left, #right {
-    top: 0;
-    bottom: 0;
-    width: 0px;
-  }
-  #left {
-    left: 0;
-  }
-  #right {
-    right: 0;
-  }
-  #top {
-    left: 0;
-    right: 0;
-    height: 0px;
-  }
-  #bottom {
-    left: 0;
-    right: 0;
-    height: 0px;
-  }
-  #top {
-    top: 0;
-  }
-  #bottom {
-    bottom: 0;
-  }
   #navtop {
-    background-color: #1e1e1e;
-    background-attachment: scroll;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    position: fixed;
-    z-index: 1;
-  }
-  #navtop {
-    left: 0px;
-    right: 0px;
     height: 70px;
   }
-  #navtop {
-    top: 0;
-  }
   #square {
-    position: fixed;
-    right: 0px;
-    left: 0px;
-    top: 0px;
     height: 72.5px;
-    width: 100vw;
-    z-index: 1;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
   }
   header .navbar-brand {
     margin-left: -0.25rem;
@@ -1134,7 +1031,7 @@ footer {
   section {
     padding-top: 70px;
     padding-bottom: 70px;
-    min-height: 50vh;
+    min-height: 70vh;
   }
   #HOME {
     padding-top: 4.75rem;
@@ -1148,6 +1045,12 @@ footer {
   #CONTACT {
     padding-bottom: 30px;
   }
+  #ABOUT #about-info, #WORK #work-info, #RESUME #resume-info {
+    margin-top: 30px;
+  }
+  #CONTACT #contact-info {
+    margin-top: 30px;
+  }
   section h1 {
     font-weight: 700;
     font-size: 3.5rem;
@@ -1160,14 +1063,8 @@ footer {
     margin-bottom: 30px;
     margin-top: 12px;
   }
-  #WORK, #CONTACT, #RESUME {
-    background-color: rgba(35, 35, 35, 0.75);
-  }
-  #ABOUT .container-fluid {
-    background-color: rgba(35, 35, 35, 0.75);
-  }
   section .sec-bg {
-    width: 100vw;
+    width: 100%;
     height: 95px;
     background-color: #1e1e1e;
     position: absolute;
@@ -1202,6 +1099,7 @@ footer {
     font-size: 28px;
   }
   #ABOUT .title-bg {
+    margin-top: 0px;
     background: -webkit-gradient(linear, left bottom, left top, from(#1e1e1e), to(rgba(24, 125, 233, 0.75)));
     background: linear-gradient(0deg, #1e1e1e, rgba(24, 125, 233, 0.75));
     position: absolute;
@@ -1277,80 +1175,19 @@ footer {
     margin-top: -35px;
   }
   footer {
-    position: absolute;
     bottom: 0px;
-    width: 100%;
     height: 1.5rem;
-    color: #FEFEFE;
-    text-align: center;
     font-size: 0.55rem;
-    letter-spacing: 0px;
     background-color: var(--contact-color);
-  }
-  footer p {
-    padding-top: 5px;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) and (-webkit-min-device-pixel-ratio: 1) {
-  html {
-    background-color: #232323;
-  }
-  #left, #right {
-    top: 0;
-    bottom: 0;
-    width: 0px;
-  }
-  #left {
-    left: 0;
-  }
-  #right {
-    right: 0;
-  }
-  #top {
-    left: 0;
-    right: 0;
-    height: 0px;
-  }
-  #bottom {
-    left: 0;
-    right: 0;
-    height: 0px;
-  }
-  #top {
-    top: 0;
-  }
-  #bottom {
-    bottom: 0;
-  }
   #navtop {
-    background-color: #1e1e1e;
-    background-attachment: scroll;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    position: fixed;
-    z-index: 1;
-  }
-  #navtop {
-    left: 0px;
-    right: 0px;
     height: 70px;
   }
-  #navtop {
-    top: 0;
-  }
   #square {
-    position: fixed;
-    right: 0px;
-    left: 0px;
-    top: 0px;
     height: 72.5px;
-    width: 100vw;
-    z-index: 1;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
   }
   header .navbar-brand img {
     width: 90px;
@@ -1385,7 +1222,7 @@ footer {
   section {
     padding-top: 70px;
     padding-bottom: 70px;
-    min-height: 50vh;
+    min-height: 70vh;
   }
   #HOME {
     padding-top: 4.75rem;
@@ -1398,6 +1235,12 @@ footer {
   }
   #CONTACT {
     padding-bottom: 30px;
+  }
+  #ABOUT #about-info, #WORK #work-info, #RESUME #resume-info {
+    margin-top: 30px;
+  }
+  #CONTACT #contact-info {
+    margin-top: 10px;
   }
   #HOME .title-line {
     margin-bottom: 25px;
@@ -1428,20 +1271,8 @@ footer {
   #HOME .btn-orange {
     font-size: 26px;
   }
-  #ABOUT .container-fluid {
-    background-color: rgba(35, 35, 35, 0.75);
-  }
-  #WORK {
-    background-color: rgba(35, 35, 35, 0.75);
-  }
-  #RESUME {
-    background-color: rgba(35, 35, 35, 0.75);
-  }
-  #CONTACT {
-    background-color: rgba(35, 35, 35, 0.75);
-  }
   section .sec-bg {
-    width: 100vw;
+    width: 100%;
     height: 85px;
     background-color: #1e1e1e;
     position: absolute;
@@ -1452,6 +1283,7 @@ footer {
     height: 335px;
   }
   #ABOUT .title-bg {
+    margin-top: 0px;
     background: -webkit-gradient(linear, left bottom, left top, from(#1e1e1e), to(rgba(24, 125, 233, 0.75)));
     background: linear-gradient(0deg, #1e1e1e, rgba(24, 125, 233, 0.75));
     position: absolute;
@@ -1521,72 +1353,34 @@ footer {
     margin-top: -35px;
   }
   footer {
-    position: absolute;
     bottom: 0px;
-    width: 100%;
     height: 1.5rem;
-    color: #FEFEFE;
-    text-align: center;
     font-size: 0.55rem;
-    letter-spacing: 0px;
     background-color: var(--contact-color);
-  }
-  footer p {
-    padding-top: 5px;
   }
 }
 
 @media (min-width: 1200px) and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
-  html {
-    overflow-x: hidden;
-  }
-  #left, #right {
-    top: 0;
-    bottom: 0;
-    width: 45px;
-  }
-  #left {
-    left: 0;
-  }
-  #right {
-    right: 0;
-  }
-  #top, #bottom {
-    left: 0;
-    right: 0;
-    height: 45px;
-  }
-  #top {
-    top: 0;
-  }
-  #bottom {
-    bottom: 0;
+  #navtop {
+    height: 60px;
   }
   #square {
-    position: fixed;
-    right: 45px;
-    top: 45px;
-    height: 75px;
-    width: 75px;
-    z-index: 2;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    height: 62.5px;
   }
   header .navbar-brand img {
-    width: 95px;
-    height: 60px;
+    width: 75px;
+    height: 50px;
+    padding: 5px;
   }
   header .navbar {
     padding: 0rem 0rem;
   }
   header .navbar-nav:last-child {
-    margin-right: 0.4rem;
+    margin-right: 0rem;
   }
   header .nav-item {
-    padding: 5px;
-    font-weight: 500;
-    font-size: 0.8rem;
-    margin-bottom: 0.75rem;
+    font-size: 0.7rem;
+    margin-bottom: 0rem;
   }
   header .navbar-brand {
     margin-left: 1.8rem;
@@ -1602,6 +1396,29 @@ footer {
     margin: auto;
     margin-bottom: 30px;
     margin-top: 12px;
+  }
+  section {
+    padding-top: 62.5px;
+    padding-bottom: 70px;
+    min-height: 100vh;
+  }
+  #HOME {
+    padding-top: 4.75rem;
+    padding-bottom: 0px;
+    min-height: 100vh;
+  }
+  #ABOUT {
+    padding-top: 62.5px;
+    padding-bottom: 0px;
+  }
+  #CONTACT {
+    padding-bottom: 30px;
+  }
+  #ABOUT #about-info, #WORK #work-info, #RESUME #resume-info {
+    margin-top: 30px;
+  }
+  #CONTACT #contact-info {
+    margin-top: 30px;
   }
   #HOME .title-line {
     margin-bottom: 25px;
@@ -1632,6 +1449,25 @@ footer {
   #HOME .btn-orange {
     font-size: 26px;
   }
+  section .sec-bg {
+    width: 100%;
+    height: 85px;
+    background-color: #1e1e1e;
+    position: absolute;
+  }
+  #ABOUT .title-bg {
+    margin-top: 0px;
+    background: -webkit-gradient(linear, left bottom, left top, from(#1e1e1e), to(rgba(24, 125, 233, 0.75)));
+    background: linear-gradient(0deg, #1e1e1e, rgba(24, 125, 233, 0.75));
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+  }
   #ABOUT img {
     margin-top: -30px;
     width: 210px;
@@ -1639,7 +1475,6 @@ footer {
   }
   #ABOUT p {
     font-size: 12px;
-    margin-top: -35px;
   }
   #WORK h3 {
     -ms-writing-mode: tb-lr;
@@ -1696,16 +1531,9 @@ footer {
     margin-top: -35px;
   }
   footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    color: #FEFEFE;
-    text-align: center;
-    font-size: 0.6rem;
-    letter-spacing: 0px;
-    margin-bottom: -5px;
-    z-index: 100000000;
+    bottom: 0px;
+    height: 1.5rem;
+    font-size: 0.55rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
