@@ -386,11 +386,31 @@ section .sec-bg{
     color: var(--work-color);
 }
 
+#WORK .modal-body h4 {
+    font-weight: 500;
+    font-style: normal;
+    font-size: 26px;
+    color: #FEFEFE;
+    text-align: justify;
+}
+
+
 #WORK .modal-body p {
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 14px;
     color: #FEFEFE;
+    text-align: justify;
+}
+
+#WORK .modal-img-apps {
+    height: 600px;
+    width: 310px;
+}
+
+#WORK .modal-img-startups {
+    height: 325px;
+    width: 600px;
 }
 
 #WORK .modal-body .modal-title-line {
