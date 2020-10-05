@@ -1,371 +1,643 @@
-:root{
-    --home-color: #1e90ff;
-    --about-color: #187de9;
-    --work-color: #126ad2;
-    --resume-color: #0c56bc;
-    --contact-color: #0643a5;
+:root {
+  --home-color: #1e90ff;
+  --about-color: #187de9;
+  --work-color: #126ad2;
+  --resume-color: #0c56bc;
+  --contact-color: #0643a5;
 }
 
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
 .container {
-    min-height:100%;
-    position:relative;
-    height:100%;
+  min-height: 100%;
+  position: relative;
+  height: 100%;
 }
 
 html {
-    scroll-behavior: smooth;
-    background-color: rgb(30, 30, 30);
+  scroll-behavior: smooth;
+  background-color: rgb(30, 30, 30);
 }
 
-html, body {
-    min-height: 100%;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
+html,
+body {
+  min-height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
 }
-
 
 #navtop {
-    background-color: rgb(30, 30, 30);
-    background-attachment: scroll;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    position: fixed;
-    z-index: 1;
-    }	
-    #navtop{
-        left: 0px; right: 0px;
-        height: 73px;
-        }
-        #navtop { top: 0; }
+  background-color: rgb(30, 30, 30);
+  background-attachment: scroll;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  position: fixed;
+  z-index: 1;
+}
+#navtop {
+  left: 0px;
+  right: 0px;
+  height: 73px;
+}
+#navtop {
+  top: 0;
+}
 
-    #square {
-    position: fixed;
-    right: 0px;
-    left: 0px;
-    top: 0px;
-    height: 75.5px;
-    width: 100vw;
-    z-index: 1;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    }
+#square {
+  position: fixed;
+  right: 0px;
+  left: 0px;
+  top: 0px;
+  height: 75.5px;
+  width: 100vw;
+  z-index: 1;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
 
-    @-webkit-keyframes AnimationName {
-        0%{background-position:0% 50%}
-        50%{background-position:100% 50%}
-        100%{background-position:0% 50%}
-    }
-    @-moz-keyframes AnimationName {
-        0%{background-position:0% 50%}
-        50%{background-position:100% 50%}
-        100%{background-position:0% 50%}
-    }
-    @-o-keyframes AnimationName {
-        0%{background-position:0% 50%}
-        50%{background-position:100% 50%}
-        100%{background-position:0% 50%}
-    }
-    @keyframes AnimationName {
-        0%{background-position:0% 50%}
-        50%{background-position:100% 50%}
-        100%{background-position:0% 50%}
-    }
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-o-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
-    header .navbar {
-        padding: 0rem 0.45rem;
-    }
+header .navbar {
+  padding: 0rem 0.45rem;
+}
 
-    header li{
-        list-style: none;
-    }
+header li {
+  list-style: none;
+}
 
-header a{
-    font-family: 'Roboto', sans-serif;
-    font-size: 0.95rem;
-    color: #FEFEFE;
-    text-decoration: none;
-    letter-spacing: 0.3rem;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    transition: all 0.4s ease;
+header a {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.95rem;
+  color: #fefefe;
+  text-decoration: none;
+  letter-spacing: 0.3rem;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 header .navbar-nav {
-    display: inline-flex;
-    position: relative;
-    overflow: hidden;
+  display: inline-flex;
+  position: relative;
+  overflow: hidden;
 }
 
 header .navbar-nav:last-child {
-    margin-right: 0.45rem;
+  margin-right: 0.45rem;
 }
 
-header .nav-item{
-    padding: 5px;
-    font-weight: 500;
-    margin-bottom: 0rem;
+header .nav-item {
+  padding: 5px;
+  font-weight: 500;
+  margin-bottom: 0rem;
 }
 
-header .navbar-brand{
-    margin-left: 1.75rem;
+header .navbar-brand {
+  margin-left: 1.75rem;
 }
 
-header .navbar-brand img{
-    width: 100px; 
-    height: 65px;
-    padding: 5px;
+header .navbar-brand img {
+  width: 100px;
+  height: 65px;
+  padding: 5px;
 }
 
-#top-menu li.active #about, header .about:hover{
-    color: var(--about-color);
-    transform: translateY(-1px);
+#top-menu li.active #about,
+header .about:hover {
+  color: var(--about-color);
+  transform: translateY(-1px);
 }
 
-#top-menu li.active #work, header .work:hover{
-    color: var(--work-color);
-    transform: translateY(-1px);
+#top-menu li.active #work,
+header .work:hover {
+  color: var(--work-color);
+  transform: translateY(-1px);
 }
 
-#top-menu li.active #resume, header .resume:hover{
-    color: var(--resume-color);
-    transform: translateY(-1px);
-
+#top-menu li.active #resume,
+header .resume:hover {
+  color: var(--resume-color);
+  transform: translateY(-1px);
 }
 
-#top-menu li.active #contact, header .contact:hover{
-    color: var(--contact-color);
-    transform: translateY(-1px);
+#top-menu li.active #contact,
+header .contact:hover {
+  color: var(--contact-color);
+  transform: translateY(-1px);
 }
 
-body{
-    font-family: 'Roboto', sans-serif;
-    background-image: linear-gradient(0deg, rgba(27, 27, 27, 0.875), rgba(27, 27, 27, 0.875)), url('SplashBackgroundInverted.png');
-    background-repeat: no-repeat, no-repeat;
-    background-position: center, right top;
-	background-attachment: fixed, fixed;
-    background-size: cover ,cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    letter-spacing: 1px;
+body {
+  font-family: "Roboto", sans-serif;
+  background-image: linear-gradient(
+      0deg,
+      rgba(27, 27, 27, 0.875),
+      rgba(27, 27, 27, 0.875)
+    ),
+    url("SplashBackgroundInverted.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, right top;
+  background-attachment: fixed, fixed;
+  background-size: cover, cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  letter-spacing: 1px;
 }
 
-section{
-    color: #FEFEFE;
-    display: flex;
-    font-style: normal;
-    width: 100%;
-    padding-top: 75.5px;
-    padding-bottom: 70px;
-    min-height: 100vh;
+section {
+  color: #fefefe;
+  display: flex;
+  font-style: normal;
+  width: 100%;
+  padding-top: 75.5px;
+  padding-bottom: 70px;
+  min-height: 100vh;
 }
 
-section h1  {
-    font-weight: 700;
-    font-size: 55px;
+section h1 {
+  font-weight: 700;
+  font-size: 55px;
 }
 
 section .title-line {
-    height: 0.3rem;
-    width: 4rem;
-    text-align: center;
-    margin: auto;
-    margin-bottom: 30px;
-    margin-top: 12px;
+  height: 0.3rem;
+  width: 4rem;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 30px;
+  margin-top: 12px;
 }
 
 #HOME {
-    padding-top: 4.75rem;
-    padding-bottom: 0px;
-    min-height: 100vh; 
+  padding-top: 4.75rem;
+  padding-bottom: 0px;
+  min-height: 100vh;
 }
 
-#ABOUT{
-    padding-top: 75.5px;
-    padding-bottom: 0px;
+#ABOUT {
+  padding-top: 75.5px;
+  padding-bottom: 0px;
 }
 
-#WORK #work-info{
-    margin-top: 75px;
+#WORK #work-info {
+  margin-top: 75px;
 }
 
 #RESUME #resume-info {
-    margin-top: 75px;
+  margin-top: 75px;
 }
 
 #CONTACT #contact-info {
-    margin-top: 75px;
+  margin-top: 75px;
 }
 
-#WORK, #RESUME, #CONTACT, #ABOUT .container-fluid{
-    background-color: rgba(35, 35, 35, 0.75);
+#WORK,
+#RESUME,
+#CONTACT,
+#ABOUT .container-fluid {
+  background-color: rgba(35, 35, 35, 0.75);
 }
 
-section .sec-bg{
-    width: 100%;
-    height: 94px;
-    background-color: rgba(30, 30, 30, 1);
-    position: absolute;
+section .sec-bg {
+  width: 100%;
+  height: 94px;
+  background-color: rgba(30, 30, 30, 1);
+  position: absolute;
 }
 
-#ABOUT .title-bg{
-    margin-top: 30px;
-    background: linear-gradient(0deg, rgba(30, 30, 30, 1), rgba(24, 125, 233, 0.75));
-    position: absolute;
-    height: 250px;
-    width: 250px;
-    left: 0; 
-    right: 0; 
-    margin-left: auto; 
-    margin-right: auto;
-    border-radius: 50%;
+#ABOUT .title-bg {
+  margin-top: 30px;
+  background: linear-gradient(
+    0deg,
+    rgba(30, 30, 30, 1),
+    rgba(24, 125, 233, 0.75)
+  );
+  position: absolute;
+  height: 250px;
+  width: 250px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
 }
 
-#HOME h1{
-    font-weight: 900;
-    font-size: 6.0rem;
-    color: white;
+#HOME h1 {
+  font-weight: 900;
+  font-size: 6rem;
+  color: white;
 }
 
 #HOME .wordCarousel {
-    font-size: 40px;
-    font-weight: 100;
-    font-family: serif;
-    div {
-        overflow: hidden;
-        height: 65px;
-        padding-top: 10px;
-        margin-top: -10px;
-        li {
-            padding: 0 10px;
-            height: 45px;
-            margin-bottom: 45px;
-            display: block;
-        }
+  font-size: 40px;
+  font-weight: 100;
+  font-family: serif;
+  div {
+    overflow: hidden;
+    height: 65px;
+    padding-top: 10px;
+    margin-top: -10px;
+    li {
+      padding: 0 10px;
+      height: 45px;
+      margin-bottom: 45px;
+      display: block;
     }
+  }
 }
 
-#HOME .flip4 { animation: flip4 15s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+#HOME .flip4 {
+  animation: flip4 15s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+}
 
 @keyframes flip4 {
-    0% { margin-top: -360px; }
-    5% { margin-top: -270px; }
-    25% { margin-top: -270px; }
-    30% { margin-top: -180px; }
-    50% { margin-top: -180px; }
-    55% { margin-top: -90px; }
-    75% { margin-top: -90px; }
-    80% { margin-top: 0px; }
-    99.99% { margin-top: 0px; }
-    100% { margin-top: -270px; }
+  0% {
+    margin-top: -360px;
+  }
+  5% {
+    margin-top: -270px;
+  }
+  25% {
+    margin-top: -270px;
+  }
+  30% {
+    margin-top: -180px;
+  }
+  50% {
+    margin-top: -180px;
+  }
+  55% {
+    margin-top: -90px;
+  }
+  75% {
+    margin-top: -90px;
+  }
+  80% {
+    margin-top: 0px;
+  }
+  99.99% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -270px;
+  }
 }
 
 #HOME .title-line {
-    background-color: var(--home-color);
+  background-color: var(--home-color);
 }
 
 #HOME .btn-orange {
-    color:  #FEFEFE;
-    background-color: var(--home-color);
-    font-weight: 400;
-    font-size: 30px;
+  color: #fefefe;
+  background-color: var(--home-color);
+  font-weight: 400;
+  font-size: 30px;
 }
 
 #HOME .btn:link,
 #HOME .btn:visited {
-    border-radius: 7.5px;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+  border-radius: 7.5px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 #HOME .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9);
-    color:  #ffffff;
-    background-color: rgb(56, 155, 255);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9);
+  color: #ffffff;
+  background-color: rgb(56, 155, 255);
 }
 
 #ABOUT .title-line {
-    background-color: var(--about-color);
+  background-color: var(--about-color);
 }
 
 #ABOUT img {
-    margin-top: -30px;
-    clip-path: circle(98% at 50% 0%);
+  margin-top: -30px;
+  clip-path: circle(98% at 50% 0%);
 }
 
 #ABOUT p {
-    font-size: 16px;
-    margin-top: -15px;
-    background-color: rgba(0, 0, 0, 0.1);
-    text-align: justify;
+  font-size: 16px;
+  margin-top: -15px;
+  background-color: rgba(0, 0, 0, 0.1);
+  text-align: justify;
 }
 
 #WORK .card-deck {
-    margin-top: 20px;
-    width: 50% !important;
+  margin-top: 20px;
+  width: 30% !important;
 }
 
-
 #WORK .title-line {
-    background-color: var(--work-color);
+  background-color: var(--work-color);
 }
 
 #WORK h3 {
-    text-orientation: upright;
-    -webkit-text-orientation: upright;
-    writing-mode: vertical-lr;
-    -webkit-writing-mode: vertical-lr;
-    font-weight: 500;
-    font-size: 1.5rem;
+  text-orientation: upright;
+  -webkit-text-orientation: upright;
+  writing-mode: vertical-lr;
+  -webkit-writing-mode: vertical-lr;
+  font-weight: 500;
+  font-size: 1.5rem;
 }
 
-#WORK .card:hover{
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+#WORK .card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-#WORK .card-img-top{
-    width: 100%;
-    height: 55vh;
-    object-fit: cover;
+#WORK .card-img-top {
+  width: 100%;
+  height: 55vh;
+  object-fit: cover;
 }
 
-#WORK .card-img-overlay{
-    background-image: linear-gradient(135deg, rgba(22, 22, 22, 0.8), rgba(22, 22, 22, 0.8));
+#WORK .card-img-overlay {
+  background-image: linear-gradient(
+    135deg,
+    rgba(22, 22, 22, 0.8),
+    rgba(22, 22, 22, 0.8)
+  );
 }
 
-#WORK .card-img-overlay:hover{
-    background-image: linear-gradient(135deg, rgba(22, 22, 22, 0.5), rgba(22, 22, 22, 0.5));
-    color: var(--work-color);
+#WORK .card-img-overlay:hover {
+  background-image: linear-gradient(
+    135deg,
+    rgba(22, 22, 22, 0.5),
+    rgba(22, 22, 22, 0.5)
+  );
+  color: var(--work-color);
 }
 
 #WORK .modal-content {
-    color: var(--work-color);
+  color: var(--work-color);
 }
 
 #WORK .modal-body {
-    background-image: linear-gradient(0deg, rgba(27, 27, 27, 0.875), rgba(27, 27, 27, 0.875)), url('SplashBackgroundInverted.png');
+  background-image: linear-gradient(
+      0deg,
+      rgba(27, 27, 27, 0.875),
+      rgba(27, 27, 27, 0.875)
+    ),
+    url("SplashBackgroundInverted.png");
+  background-repeat: repeat, repeat;
+  background-position: center, right top;
+  background-attachment: scroll, scroll;
+  background-size: auto, auto;
+  -webkit-background-size: auto, auto;
+  -moz-background-size: auto, auto;
+  -o-background-size: auto, auto;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+#WORK .modal-body h2 {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 55px;
+  color: var(--work-color);
+}
+
+#WORK .modal-body h4 {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 26px;
+  color: #fefefe;
+  text-align: justify;
+}
+
+#WORK .modal-body p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #fefefe;
+  text-align: justify;
+}
+
+#WORK .modal-img-apps {
+  height: 600px;
+  width: 310px;
+}
+
+#WORK .modal-img-startups {
+  height: 325px;
+  width: 600px;
+}
+
+#WORK .modal-body .modal-title-line {
+  height: 5px;
+  width: 60px;
+  background-color: #fefefe;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 45px;
+  margin-top: 10px;
+}
+
+#RESUME .title-line {
+  background-color: var(--resume-color);
+}
+
+#RESUME .btn-green {
+  color: #fefefe;
+  background-color: var(--resume-color);
+  font-weight: 400;
+  font-size: 30px;
+  margin-top: 25px;
+}
+
+#RESUME .btn:link,
+#RESUME .btn:visited {
+  border-radius: 7.5px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#RESUME .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9);
+  color: #ffffff;
+  background-color: rgb(34, 96, 184);
+}
+
+#RESUME embed {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  background-color: white;
+}
+
+#RESUME .badge {
+  padding: 70px;
+}
+
+#CONTACT .title-line {
+  background-color: var(--contact-color);
+}
+
+#CONTACT i {
+  font-size: 70px;
+  margin: 70px;
+}
+
+#CONTACT h6 {
+  font-size: 20px;
+  margin: 20px;
+  margin-top: -35px;
+}
+
+#CONTACT h6 a {
+  font-size: 20px;
+  margin-top: -35px;
+  text-decoration: none;
+  color: var(--contact-color);
+}
+
+#CONTACT h6 a:hover {
+  color: rgb(23, 78, 165);
+}
+
+#CONTACT .btn:hover {
+  cursor: pointer;
+  transform: translateY(-3px);
+  color: var(--contact-color) !important;
+  text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.9);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 0rem;
+  color: #fefefe;
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 0px;
+}
+
+footer p {
+  padding-top: 5px;
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) and (-webkit-min-device-pixel-ratio: 1) {
+  #navtop {
+    height: 67px;
+  }
+
+  #square {
+    height: 69.5px;
+  }
+
+  header .navbar-brand {
+    margin-left: -0.25rem;
+  }
+
+  header .navbar-brand img {
+    width: 85px;
+    height: 55px;
+    padding: 5px;
+  }
+
+  header .navbar {
+    padding: 0rem 1rem;
+  }
+
+  header .nav-item {
+    padding: 5px;
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  header .navbar-collapse {
+    background-color: rgba(30, 30, 30, 1);
+    text-align: center;
+    align-items: center;
+    padding-top: 1.5rem;
+    width: 100%;
+  }
+
+  header .navbar-toggler-icon {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+
+  body {
+    background-image: linear-gradient(
+        0deg,
+        rgba(27, 27, 27, 0.875),
+        rgba(27, 27, 27, 0.875)
+      ),
+      url("SplashBackgroundInverted.png");
     background-repeat: repeat, repeat;
     background-position: center, right top;
     background-attachment: scroll, scroll;
@@ -374,1274 +646,1110 @@ section .sec-bg{
     -moz-background-size: auto, auto;
     -o-background-size: auto, auto;
     letter-spacing: 1px;
-    font-weight: 500;
-    font-size: 22px;
-}
+  }
 
+  section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    min-height: 70vh;
+  }
 
-#WORK .modal-body h2 {
+  #HOME {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    min-height: 100vh;
+  }
+
+  #ABOUT {
+    padding-top: 70px;
+    padding-bottom: 0px;
+  }
+
+  #CONTACT {
+    padding-bottom: 0px;
+  }
+
+  #ABOUT #about-info,
+  #WORK #work-info,
+  #RESUME #resume-info {
+    margin-top: 30px;
+  }
+
+  #CONTACT #contact-info {
+    margin-top: 0px;
+  }
+
+  section h1 {
     font-weight: 700;
-    font-style: normal;
-    font-size: 55px;
-    color: var(--work-color);
-}
+    font-size: 2.5rem;
+  }
 
-#WORK .modal-body h4 {
-    font-weight: 500;
-    font-style: normal;
-    font-size: 26px;
-    color: #FEFEFE;
-    text-align: justify;
-}
-
-
-#WORK .modal-body p {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    color: #FEFEFE;
-    text-align: justify;
-}
-
-#WORK .modal-img-apps {
-    height: 600px;
-    width: 310px;
-}
-
-#WORK .modal-img-startups {
-    height: 325px;
-    width: 600px;
-}
-
-#WORK .modal-body .modal-title-line {
-    height: 5px;
-    width: 60px;
-    background-color: #FEFEFE;
-    text-align: center;
-    margin: auto;
-    margin-bottom: 45px;
-    margin-top: 10px;
-}
-
-
-#RESUME .title-line {
-    background-color: var(--resume-color);
-}
-
-#RESUME .btn-green {
-    color:  #FEFEFE;
-    background-color: var(--resume-color);
-    font-weight: 400;
-    font-size: 30px;
-    margin-top: 25px;
-}
-
-#RESUME .btn:link,
-#RESUME .btn:visited {
-    border-radius: 7.5px;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-}
-
-#RESUME .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9);
-    color:  #ffffff;
-    background-color: rgb(34, 96, 184);
-}
-
-#RESUME embed {
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-    background-color: white;
-}
-
-#RESUME .badge {
-    padding: 70px;
-}
-
-#CONTACT .title-line {
-    background-color: var(--contact-color);
-}
-
-#CONTACT i {
-    font-size: 70px;
-    margin: 70px;
-}
-
-#CONTACT h6{
-    font-size: 20px;
-    margin: 20px;
-    margin-top: -35px;
-}
-
-#CONTACT h6 a{
-    font-size: 20px;
-    margin-top: -35px;
-    text-decoration: none;
-    color: var(--contact-color);
-}
-
-#CONTACT h6 a:hover{
-    color: rgb(23, 78, 165);
-}
-
-#CONTACT .btn:hover{
-    cursor: pointer;
-    transform: translateY(-3px);
-    color:  var(--contact-color) !important;
-    text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.9);
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-}
-
-
-footer {
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    height: 0rem; 
-    color: #FEFEFE;
-    text-align: center;
-    font-size: 0.75rem;
-    letter-spacing: 0px;
-}
-
-footer p{
-    padding-top: 5px;
-}
-
-// Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) and (-webkit-min-device-pixel-ratio: 1) {
-	
-    #navtop{
-        height: 67px;
-    }
-
-    #square {
-        height: 69.5px;
-    }
-
-    header .navbar-brand{
-        margin-left: -0.25rem;
-    }
-
-    header .navbar-brand img{
-        width: 85px; 
-        height: 55px;
-        padding: 5px;
-    }
-
-    header .navbar {
-        padding: 0rem 1rem;
-    }
-
-    header .nav-item{
-        padding: 5px;
-        font-weight: 500;
-        font-size: 1.2rem;
-        margin-bottom: 1.5rem;
-    }
-
-    header .navbar-collapse{
-        background-color: rgba(30, 30, 30, 1);
-        text-align: center;
-        align-items: center;
-        padding-top: 1.5rem;
-        width: 100%;
-    }
-
-    header .navbar-toggler-icon {
-        margin-left: -5px;
-        margin-right: -5px;
-    }
-
-    body{
-        background-image: linear-gradient(0deg, rgba(27, 27, 27, 0.875), rgba(27, 27, 27, 0.875)), url('SplashBackgroundInverted.png');
-        background-repeat: repeat, repeat;
-        background-position: center, right top;
-        background-attachment: scroll, scroll;
-        background-size: auto, auto;
-        -webkit-background-size: auto, auto;
-        -moz-background-size: auto, auto;
-        -o-background-size: auto, auto;
-        letter-spacing: 1px;
-    }
-
-    section {
-        padding-top: 70px;
-        padding-bottom: 70px;
-        min-height: 70vh;
-    }
-
-    #HOME {
-        padding-top: 0px;
-        padding-bottom: 0px;
-        min-height: 100vh; 
-    }
-
-    #ABOUT{
-        padding-top: 70px;
-        padding-bottom: 0px;
-    }
-
-    #CONTACT{
-        padding-bottom: 0px;
-    }
-
-    #ABOUT #about-info, #WORK #work-info, #RESUME #resume-info {
-        margin-top: 30px;
-    }
-
-    #CONTACT #contact-info {
-        margin-top: 0px;
-    }
-
-    section h1  {
-        font-weight: 700;
-        font-size: 2.5rem;
-    }    
-
-    section .title-line {
+  section .title-line {
     height: 0.3rem;
     width: 4rem;
     text-align: center;
     margin: auto;
     margin-bottom: 30px;
     margin-top: 12px;
-    }
+  }
 
-    #HOME .title-line {
-        margin-bottom: 25px;
-        margin-top: 0px;
-        }
+  #HOME .title-line {
+    margin-bottom: 25px;
+    margin-top: 0px;
+  }
 
-    #HOME h1{
-        font-weight: 900;
-        font-size: 3.25rem;
-    }
+  #HOME h1 {
+    font-weight: 900;
+    font-size: 3.25rem;
+  }
 
-    #HOME .wordCarousel {
-        font-size: 24px;
-        font-weight: 100;
-        font-family: serif;
-        div {
-            overflow: hidden;
-            height: 70px;
-            padding-top: 15px;
-            margin-top: -10px;
-            li {
-                padding: 0 10px;
-                height: 45px;
-                margin-bottom: 45px;
-                display: block;
-            }
-        }
+  #HOME .wordCarousel {
+    font-size: 24px;
+    font-weight: 100;
+    font-family: serif;
+    div {
+      overflow: hidden;
+      height: 70px;
+      padding-top: 15px;
+      margin-top: -10px;
+      li {
+        padding: 0 10px;
+        height: 45px;
+        margin-bottom: 45px;
+        display: block;
+      }
     }
+  }
 
-    #HOME .btn-orange {
-        font-size: 22px;
-    }
+  #HOME .btn-orange {
+    font-size: 22px;
+  }
 
-    section .sec-bg{
-        width: 100%;
-        height: 74px;
-        background-color: rgba(30, 30, 30, 1);
-        position: absolute;
-    }
+  section .sec-bg {
+    width: 100%;
+    height: 74px;
+    background-color: rgba(30, 30, 30, 1);
+    position: absolute;
+  }
 
+  #ABOUT .title-bg {
+    margin-top: 0px;
+    background: linear-gradient(
+      0deg,
+      rgba(30, 30, 30, 1),
+      rgba(24, 125, 233, 0.75)
+    );
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+  }
 
-    #ABOUT .title-bg{
-        margin-top: 0px;
-        background: linear-gradient(0deg, rgba(30, 30, 30, 1), rgba(24, 125, 233, 0.75));
-        position: absolute;
-        height: 150px;
-        width: 150px;
-        left: 0; 
-        right: 0; 
-        margin-left: auto; 
-        margin-right: auto;
-        border-radius: 50%;
-    }
-    
+  #ABOUT img {
+    margin-top: -30px;
+    width: 150px;
+    height: 250px;
+  }
 
-    #ABOUT img {
-        margin-top: -30px;
-        width: 150px;
-        height: 250px;
-    } 
+  #ABOUT p {
+    font-size: 11px;
+    margin-top: -30px;
+  }
 
-    #ABOUT p {
-        font-size: 11px;
-        margin-top: -30px;
-    }
+  #WORK h3 {
+    writing-mode: vertical-lr;
+    -webkit-text-orientation: upright;
+    text-orientation: upright;
+    -webkit-writing-mode: vertical-lr;
+    font-weight: 500;
+    font-size: 1.3rem;
+  }
 
-    #WORK h3 {
-        writing-mode: vertical-lr;
-        -webkit-text-orientation: upright;
-        text-orientation: upright;
-        -webkit-writing-mode: vertical-lr;
-        font-weight: 500;
-        font-size: 1.3rem;
-    }
+  #WORK .card-deck {
+    width: 70% !important;
+  }
 
-    #WORK .card-deck {
-        width: 70% !important;
-    }
+  #WORK .card {
+    margin-top: 0px !important;
+    margin-bottom: 20px !important;
+  }
 
-    #WORK .card {
-       margin-top: 0px !important;
-       margin-bottom: 20px !important;
-    }
+  #WORK .card-img-top {
+    width: 100%;
+    height: 45vh;
+    object-fit: cover;
+  }
 
-    #WORK .card-img-top{
-        width: 100%;
-        height: 45vh;
-        object-fit: cover;
-    }
+  #WORK .modal-body h2 {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.5rem;
+    color: var(--work-color);
+  }
 
-    #WORK .modal-body h2 {
-        font-weight: 700;
-        font-style: normal;
-        font-size: 2.5rem;
-        color: var(--work-color);
-    }
-    
-    #WORK .modal-body p {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 11px;
-        color: #FEFEFE;
-    }
+  #WORK .modal-body p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    color: #fefefe;
+  }
 
-    #RESUME .btn-green {
-        font-size: 22px;
-        margin-top: 25px;
-    }
+  #RESUME .btn-green {
+    font-size: 22px;
+    margin-top: 25px;
+  }
 
-    #RESUME embed {
-        width: 225px;
-        height: 315px;
-        background-color: white;
-    }
+  #RESUME embed {
+    width: 225px;
+    height: 315px;
+    background-color: white;
+  }
 
-    #CONTACT i {
-        font-size: 55px;
-        margin: 50px;
-    }
-    
-    #CONTACT h6{
-        font-size: 15px;
-        margin: 20px;
-        margin-top: -35px;
-    }
-    
-    #CONTACT h6 a{
-        font-size: 15px;
-        margin-top: -35px;
-    }
+  #CONTACT i {
+    font-size: 55px;
+    margin: 50px;
+  }
 
-    footer {
-        bottom: 0px;
-        height: 1.5rem; 
-        font-size: 0.55rem;
-        background-color: var(--contact-color);
-    }
+  #CONTACT h6 {
+    font-size: 15px;
+    margin: 20px;
+    margin-top: -35px;
+  }
+
+  #CONTACT h6 a {
+    font-size: 15px;
+    margin-top: -35px;
+  }
+
+  footer {
+    bottom: 0px;
+    height: 1.5rem;
+    font-size: 0.55rem;
+    background-color: var(--contact-color);
+  }
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) and (max-width: 767.98px) and (-webkit-min-device-pixel-ratio: 1) {
+  #navtop {
+    height: 67px;
+  }
 
-    #navtop {
-        height: 67px;
-    }
+  #square {
+    height: 69.5px;
+  }
 
-    #square {
-        height: 69.5px;
-    }
+  header .navbar-brand {
+    margin-left: -0.25rem;
+  }
 
-    header .navbar-brand{
-        margin-left: -0.25rem;
-    }
+  header .navbar-brand img {
+    width: 85px;
+    height: 55px;
+    padding: 5px;
+  }
 
-      header .navbar-brand img{
-        width: 85px; 
-        height: 55px;
-        padding: 5px;
-    }
+  header .navbar {
+    padding: 0rem 1rem;
+  }
 
-    header .navbar {
-        padding: 0rem 1rem;
-    }
+  header .nav-item {
+    padding: 5px;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
 
-    header .nav-item{
-        padding: 5px;
-        font-weight: 500;
-        font-size: 1rem;
-        margin-bottom: 1rem;
-    }
+  header .navbar-collapse {
+    background-color: rgba(30, 30, 30, 1);
+    text-align: center;
+    align-items: center;
+    padding-top: 1rem;
+    width: 100%;
+  }
 
-    header .navbar-collapse{
-        background-color: rgba(30, 30, 30, 1);
-        text-align: center;
-        align-items: center;
-        padding-top: 1rem;
-        width: 100%;
-    }
+  header .navbar-toggler-icon {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
 
-    header .navbar-toggler-icon {
-        margin-left: -5px;
-        margin-right: -5px;
-    }
+  body {
+    background-image: linear-gradient(
+        0deg,
+        rgba(27, 27, 27, 0.875),
+        rgba(27, 27, 27, 0.875)
+      ),
+      url("SplashBackgroundInverted.png");
+    background-repeat: repeat, repeat;
+    background-position: center, right top;
+    background-attachment: scroll, scroll;
+    background-size: auto, auto;
+    -webkit-background-size: auto, auto;
+    -moz-background-size: auto, auto;
+    -o-background-size: auto, auto;
+    letter-spacing: 1px;
+  }
 
-    body{
-        background-image: linear-gradient(0deg, rgba(27, 27, 27, 0.875), rgba(27, 27, 27, 0.875)), url('SplashBackgroundInverted.png');
-        background-repeat: repeat, repeat;
-        background-position: center, right top;
-        background-attachment: scroll, scroll;
-        background-size: auto, auto;
-        -webkit-background-size: auto, auto;
-        -moz-background-size: auto, auto;
-        -o-background-size: auto, auto;
-        letter-spacing: 1px;
-    }
+  section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    min-height: 70vh;
+  }
 
-    section {
-        padding-top: 70px;
-        padding-bottom: 70px;
-        min-height: 70vh;
-    }
+  #HOME {
+    padding-top: 4.75rem;
+    padding-bottom: 0px;
+    min-height: 100vh;
+  }
 
-    #HOME {
-        padding-top: 4.75rem;
-        padding-bottom: 0px;
-        min-height: 100vh; 
-    }
+  #ABOUT {
+    padding-top: 70px;
+    padding-bottom: 0px;
+  }
 
-    #ABOUT{
-        padding-top: 70px;
-        padding-bottom: 0px;
-    }
+  #CONTACT {
+    padding-bottom: 0px;
+  }
 
-    #CONTACT{
-        padding-bottom: 0px;
-    }
+  #ABOUT #about-info,
+  #WORK #work-info,
+  #RESUME #resume-info {
+    margin-top: 15px;
+  }
 
-    #ABOUT #about-info, #WORK #work-info, #RESUME #resume-info {
-        margin-top: 15px;
-    }
+  #CONTACT #contact-info {
+    margin-top: 0px;
+  }
 
-    #CONTACT #contact-info {
-        margin-top: 0px;
-    }
+  section h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+  }
 
-    section h1  {
-        font-weight: 700;
-        font-size: 2.5rem;
-    }    
-
-    section .title-line {
+  section .title-line {
     height: 0.3rem;
     width: 4rem;
     text-align: center;
     margin: auto;
     margin-bottom: 30px;
     margin-top: 12px;
-    }
+  }
 
-    #HOME .title-line {
-        margin-bottom: 25px;
-        margin-top: 0px;
-        }
+  #HOME .title-line {
+    margin-bottom: 25px;
+    margin-top: 0px;
+  }
 
-    #HOME h1{
-        font-weight: 900;
-        font-size: 3.25rem;
-        color: white;
-    }
+  #HOME h1 {
+    font-weight: 900;
+    font-size: 3.25rem;
+    color: white;
+  }
 
-    #HOME .wordCarousel {
-        font-size: 24px;
-        font-weight: 100;
-        font-family: serif;
-        div {
-            overflow: hidden;
-            height: 70px;
-            padding-top: 15px;
-            margin-top: -10px;
-            li {
-                padding: 0 10px;
-                height: 45px;
-                margin-bottom: 45px;
-                display: block;
-            }
-        }
+  #HOME .wordCarousel {
+    font-size: 24px;
+    font-weight: 100;
+    font-family: serif;
+    div {
+      overflow: hidden;
+      height: 70px;
+      padding-top: 15px;
+      margin-top: -10px;
+      li {
+        padding: 0 10px;
+        height: 45px;
+        margin-bottom: 45px;
+        display: block;
+      }
     }
+  }
 
-    #HOME .btn-orange {
-        font-size: 22px;
-    }
+  #HOME .btn-orange {
+    font-size: 22px;
+  }
 
-    section .sec-bg{
-        width: 100%;
-        height: 74px;
-        background-color: rgba(30, 30, 30, 1);
-        position: absolute;
-    }
+  section .sec-bg {
+    width: 100%;
+    height: 74px;
+    background-color: rgba(30, 30, 30, 1);
+    position: absolute;
+  }
 
-    #ABOUT .title-bg{
-        margin-top: 0px;
-        background: linear-gradient(0deg, rgba(30, 30, 30, 1), rgba(24, 125, 233, 0.75));
-        position: absolute;
-        height: 150px;
-        width: 150px;
-        left: 0; 
-        right: 0; 
-        margin-left: auto; 
-        margin-right: auto;
-        border-radius: 50%;
-    }
+  #ABOUT .title-bg {
+    margin-top: 0px;
+    background: linear-gradient(
+      0deg,
+      rgba(30, 30, 30, 1),
+      rgba(24, 125, 233, 0.75)
+    );
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+  }
 
-    #ABOUT img {
-        margin-top: -30px;
-        width: 150px;
-        height: 250px;
-    } 
+  #ABOUT img {
+    margin-top: -30px;
+    width: 150px;
+    height: 250px;
+  }
 
-    #ABOUT p {
-        font-size: 11px;
-        margin-top: -30px;
-    }
+  #ABOUT p {
+    font-size: 11px;
+    margin-top: -30px;
+  }
 
-    #WORK h3 {
-        writing-mode: vertical-lr;
-        -webkit-text-orientation: upright;
-        text-orientation: upright;
-        -webkit-writing-mode: vertical-lr;
-        font-weight: 500;
-        font-size: 0.65rem;
-    }
+  #WORK h3 {
+    writing-mode: vertical-lr;
+    -webkit-text-orientation: upright;
+    text-orientation: upright;
+    -webkit-writing-mode: vertical-lr;
+    font-weight: 500;
+    font-size: 0.65rem;
+  }
 
-    #WORK .card-deck {
-        width: 90% !important;
-    }
+  #WORK .card-deck {
+    width: 90% !important;
+  }
 
-    #WORK .card {
-       margin-top: 10px !important;
-       margin-bottom: 10px !important;
-       margin-left: 0px !important;
-       margin-right: 0px !important;
-    }
+  #WORK .card {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
 
-    #WORK .card-img-top{
-        width: 100%;
-        height: 55vh;
-        object-fit: cover;
-    }
+  #WORK .card-img-top {
+    width: 100%;
+    height: 55vh;
+    object-fit: cover;
+  }
 
-    #WORK .modal-body h2 {
-        font-weight: 700;
-        font-style: normal;
-        font-size: 2.5rem;
-        color: var(--work-color);
-    }
-    
-    #WORK .modal-body p {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 11px;
-        color: #FEFEFE;
-    }
+  #WORK .modal-body h2 {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.5rem;
+    color: var(--work-color);
+  }
 
+  #WORK .modal-body p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    color: #fefefe;
+  }
 
-    #RESUME .btn-green {
-        font-size: 22px;
-        margin-top: 25px;
-    }
+  #RESUME .btn-green {
+    font-size: 22px;
+    margin-top: 25px;
+  }
 
-    #RESUME embed {
-        width: 225px;
-        height: 325px;
-    }
-    
-    #CONTACT i {
-        font-size: 55px;
-        margin: 50px;
-    }
-    
-    #CONTACT h6{
-        font-size: 15px;
-        margin: 20px;
-        margin-top: -35px;
-    }
-    
-    #CONTACT h6 a{
-        font-size: 15px;
-        margin-top: -35px;
-    }
+  #RESUME embed {
+    width: 225px;
+    height: 325px;
+  }
 
-    footer {
-        bottom: 0px;
-        height: 1.5rem; 
-        font-size: 0.55rem;
-        background-color: var(--contact-color);
-    }
+  #CONTACT i {
+    font-size: 55px;
+    margin: 50px;
+  }
+
+  #CONTACT h6 {
+    font-size: 15px;
+    margin: 20px;
+    margin-top: -35px;
+  }
+
+  #CONTACT h6 a {
+    font-size: 15px;
+    margin-top: -35px;
+  }
+
+  footer {
+    bottom: 0px;
+    height: 1.5rem;
+    font-size: 0.55rem;
+    background-color: var(--contact-color);
+  }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) and (max-width: 991.98px) and (-webkit-min-device-pixel-ratio: 1) {
+  #navtop {
+    height: 70px;
+  }
 
-    #navtop{
-        height: 70px;
-    }
+  #square {
+    height: 72.5px;
+  }
 
-    #square {
-        height: 72.5px;
-    }
+  header .navbar-brand {
+    margin-left: -0.25rem;
+  }
 
-    header .navbar-brand{
-        margin-left: -0.25rem;
-    }
+  header .navbar-brand img {
+    width: 90px;
+    height: 60px;
+    padding: 5px;
+  }
 
-    header .navbar-brand img{
-        width: 90px; 
-        height: 60px;
-        padding: 5px;
-    }
+  header .navbar {
+    padding: 0rem 1rem;
+  }
 
-    header .navbar {
-        padding: 0rem 1rem;
-    }
+  header .nav-item {
+    padding: 5px;
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
 
-    header .nav-item{
-        padding: 5px;
-        font-weight: 500;
-        font-size: 1.2rem;
-        margin-bottom: 1.5rem;
-    }
+  header .navbar-collapse {
+    background-color: rgba(30, 30, 30, 1);
+    text-align: center;
+    align-items: center;
+    padding-top: 1.5rem;
+    width: 100%;
+  }
 
-    header .navbar-collapse{
-        background-color: rgba(30, 30, 30, 1);
-        text-align: center;
-        align-items: center;
-        padding-top: 1.5rem;
-        width: 100%;
-    }
+  header .navbar-toggler-icon {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
 
-    header .navbar-toggler-icon {
-        margin-left: -5px;
-        margin-right: -5px;
-    }
+  body {
+    background-image: linear-gradient(
+        0deg,
+        rgba(27, 27, 27, 0.875),
+        rgba(27, 27, 27, 0.875)
+      ),
+      url("SplashBackgroundInverted.png");
+    background-repeat: repeat, repeat;
+    background-position: center, right top;
+    background-attachment: scroll, scroll;
+    background-size: auto, auto;
+    -webkit-background-size: auto, auto;
+    -moz-background-size: auto, auto;
+    -o-background-size: auto, auto;
+    letter-spacing: 1px;
+  }
 
-    body{
-        background-image: linear-gradient(0deg, rgba(27, 27, 27, 0.875), rgba(27, 27, 27, 0.875)), url('SplashBackgroundInverted.png');
-        background-repeat: repeat, repeat;
-        background-position: center, right top;
-        background-attachment: scroll, scroll;
-        background-size: auto, auto;
-        -webkit-background-size: auto, auto;
-        -moz-background-size: auto, auto;
-        -o-background-size: auto, auto;
-        letter-spacing: 1px;
-    }
-    
-    section {
-        padding-top: 70px;
-        padding-bottom: 70px;
-        min-height: 70vh;
-    }
+  section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    min-height: 70vh;
+  }
 
-    #HOME {
-        padding-top: 4.75rem;
-        padding-bottom: 0px;
-        min-height: 100vh; 
-    }
+  #HOME {
+    padding-top: 4.75rem;
+    padding-bottom: 0px;
+    min-height: 100vh;
+  }
 
-    #ABOUT{
-        padding-top: 70px;
-        padding-bottom: 0px;
-    }
+  #ABOUT {
+    padding-top: 70px;
+    padding-bottom: 0px;
+  }
 
-    #CONTACT{
-        padding-bottom: 30px;
-    }
+  #CONTACT {
+    padding-bottom: 30px;
+  }
 
-    #ABOUT #about-info, #WORK #work-info, #RESUME #resume-info {
-        margin-top: 30px;
-    }
+  #ABOUT #about-info,
+  #WORK #work-info,
+  #RESUME #resume-info {
+    margin-top: 30px;
+  }
 
-    #CONTACT #contact-info {
-        margin-top: 30px;
-    }
+  #CONTACT #contact-info {
+    margin-top: 30px;
+  }
 
-    section h1  {
-        font-weight: 700;
-        font-size: 3.5rem;
-    }    
+  section h1 {
+    font-weight: 700;
+    font-size: 3.5rem;
+  }
 
-    section .title-line {
+  section .title-line {
     height: 0.3rem;
     width: 4rem;
     text-align: center;
     margin: auto;
     margin-bottom: 30px;
     margin-top: 12px;
-    }
+  }
 
-    section .sec-bg{
-        width: 100%;
-        height: 95px;
-        background-color: rgba(30, 30, 30, 1);
-        position: absolute;
-    }
+  section .sec-bg {
+    width: 100%;
+    height: 95px;
+    background-color: rgba(30, 30, 30, 1);
+    position: absolute;
+  }
 
-    #HOME .title-line {
-        margin-bottom: 25px;
-        margin-top: 0px;
-        }
+  #HOME .title-line {
+    margin-bottom: 25px;
+    margin-top: 0px;
+  }
 
-    #HOME h1{
-        font-weight: 900;
-        font-size: 5.5rem;
-        color: white;
-    }
+  #HOME h1 {
+    font-weight: 900;
+    font-size: 5.5rem;
+    color: white;
+  }
 
-    #HOME .wordCarousel {
-        font-size: 32px;
-        font-weight: 100;
-        font-family: serif;
-        div {
-            overflow: hidden;
-            height: 70px;
-            padding-top: 15px;
-            margin-top: -10px;
-            li {
-                padding: 0 10px;
-                height: 45px;
-                margin-bottom: 45px;
-                display: block;
-            }
-        }
-    }
-
-    #HOME .btn-orange {
-        font-size: 28px;
-    }
-
-    #ABOUT .title-bg{
-        margin-top: 0px;
-        background: linear-gradient(0deg, rgba(30, 30, 30, 1), rgba(24, 125, 233, 0.75));
-        position: absolute;
-        height: 200px;
-        width: 200px;
-        left: 0; 
-        right: 0; 
-        margin-left: auto; 
-        margin-right: auto;
-        border-radius: 50%;
-    }
-
-    #ABOUT img {
-        margin-top: -30px;
-        width: 210px;
-        height: 350px;
-    } 
-
-    #ABOUT p {
-        font-size: 12px;
-        margin-top: -35px;
-    }
-
-    #WORK h3 {
-        writing-mode: vertical-lr;
-        -webkit-text-orientation: upright;
-        text-orientation: upright;
-        -webkit-writing-mode: vertical-lr;
-        font-weight: 500;
-        font-size: 1.25rem;
-    }
-
-    #WORK .card-deck {
-        width: 100% !important;
-    }
-
-    #WORK .card-img-top{
-        width: 100%;
-        height: 50vh;
-        object-fit: cover;
-    }
-
-    #WORK .modal-body h2 {
-        font-weight: 700;
-        font-style: normal;
-        font-size: 3rem;
-        color: var(--work-color);
-    }
-    
-    #WORK .modal-body p {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        color: #FEFEFE;
-    }
-
-    #RESUME .btn-green {
-        font-size: 22px;
-        margin-top: 25px;
-    }
-
-    #RESUME embed {
-        width: 450px;
-        height: 600px;
-    }
-    
-    #CONTACT i {
-        font-size: 55px;
-        margin-top: 45px;
+  #HOME .wordCarousel {
+    font-size: 32px;
+    font-weight: 100;
+    font-family: serif;
+    div {
+      overflow: hidden;
+      height: 70px;
+      padding-top: 15px;
+      margin-top: -10px;
+      li {
+        padding: 0 10px;
+        height: 45px;
         margin-bottom: 45px;
-        margin-left: 20px;
-        margin-right: 20px;
+        display: block;
+      }
     }
-    
-    #CONTACT h6{
-        font-size: 15px;
-        margin: 20px;
-        margin-top: -35px;
-    }
-    
-    #CONTACT h6 a{
-        font-size: 15px;
-        margin-top: -35px;
-    }
+  }
 
-    footer {
-        bottom: 0px;
-        height: 1.5rem; 
-        font-size: 0.55rem;
-        background-color: var(--contact-color);
-    }
+  #HOME .btn-orange {
+    font-size: 28px;
+  }
+
+  #ABOUT .title-bg {
+    margin-top: 0px;
+    background: linear-gradient(
+      0deg,
+      rgba(30, 30, 30, 1),
+      rgba(24, 125, 233, 0.75)
+    );
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+  }
+
+  #ABOUT img {
+    margin-top: -30px;
+    width: 210px;
+    height: 350px;
+  }
+
+  #ABOUT p {
+    font-size: 12px;
+    margin-top: -35px;
+  }
+
+  #WORK h3 {
+    writing-mode: vertical-lr;
+    -webkit-text-orientation: upright;
+    text-orientation: upright;
+    -webkit-writing-mode: vertical-lr;
+    font-weight: 500;
+    font-size: 1.25rem;
+  }
+
+  #WORK .card-deck {
+    width: 100% !important;
+  }
+
+  #WORK .card-img-top {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+  }
+
+  #WORK .modal-body h2 {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3rem;
+    color: var(--work-color);
+  }
+
+  #WORK .modal-body p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    color: #fefefe;
+  }
+
+  #RESUME .btn-green {
+    font-size: 22px;
+    margin-top: 25px;
+  }
+
+  #RESUME embed {
+    width: 450px;
+    height: 600px;
+  }
+
+  #CONTACT i {
+    font-size: 55px;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  #CONTACT h6 {
+    font-size: 15px;
+    margin: 20px;
+    margin-top: -35px;
+  }
+
+  #CONTACT h6 a {
+    font-size: 15px;
+    margin-top: -35px;
+  }
+
+  footer {
+    bottom: 0px;
+    height: 1.5rem;
+    font-size: 0.55rem;
+    background-color: var(--contact-color);
+  }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) and (max-width: 1199.98px) and (-webkit-min-device-pixel-ratio: 1) {
+  #navtop {
+    height: 70px;
+  }
 
-    #navtop{
-        height: 70px;
-    }
+  #square {
+    height: 72.5px;
+  }
 
-    #square {
-        height: 72.5px;
-    }
+  header .navbar-brand img {
+    width: 90px;
+    height: 60px;
+    padding: 5px;
+  }
 
-    header .navbar-brand img{
-        width: 90px; 
-        height: 60px;
-        padding: 5px;
-    }
+  header .navbar {
+    padding: 0rem 0rem;
+  }
 
-    header .navbar {
-        padding: 0rem 0rem;
-    }
+  header .navbar-nav:last-child {
+    margin-right: 0rem;
+  }
 
-    header .navbar-nav:last-child {
-        margin-right: 0rem;
-    }
+  header .nav-item {
+    font-size: 0.8rem;
+    margin-bottom: -0.5rem;
+  }
 
-    header .nav-item{
-        font-size: 0.8rem;
-        margin-bottom: -0.5rem;
-    }
+  header .navbar-brand {
+    margin-left: 1.8rem;
+  }
 
-    header .navbar-brand{
-        margin-left: 1.8rem;
-    }
+  section h1 {
+    font-weight: 700;
+    font-size: 3rem;
+  }
 
-    section h1  {
-        font-weight: 700;
-        font-size: 3.0rem;
-    }    
-
-    section .title-line {
+  section .title-line {
     height: 0.3rem;
     width: 4rem;
     text-align: center;
     margin: auto;
     margin-bottom: 30px;
     margin-top: 12px;
-    }
+  }
 
-    section {
-        padding-top: 70px;
-        padding-bottom: 70px;
-        min-height: 70vh;
-    }
+  section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    min-height: 70vh;
+  }
 
-    #HOME {
-        padding-top: 4.75rem;
-        padding-bottom: 0px;
-        min-height: 100vh; 
-    }
+  #HOME {
+    padding-top: 4.75rem;
+    padding-bottom: 0px;
+    min-height: 100vh;
+  }
 
-    #ABOUT{
-        padding-top: 70px;
-        padding-bottom: 0px;
-    }
+  #ABOUT {
+    padding-top: 70px;
+    padding-bottom: 0px;
+  }
 
-    #CONTACT{
-        padding-bottom: 30px;
-    }
+  #CONTACT {
+    padding-bottom: 30px;
+  }
 
-    #ABOUT #about-info, #WORK #work-info, #RESUME #resume-info {
-        margin-top: 30px;
-    }
+  #ABOUT #about-info,
+  #WORK #work-info,
+  #RESUME #resume-info {
+    margin-top: 30px;
+  }
 
-    #CONTACT #contact-info {
-        margin-top: 10px;
-    }
+  #CONTACT #contact-info {
+    margin-top: 10px;
+  }
 
-    #HOME .title-line {
-        margin-bottom: 25px;
-        margin-top: 0px;
-        }
+  #HOME .title-line {
+    margin-bottom: 25px;
+    margin-top: 0px;
+  }
 
-    #HOME h1{
-        font-weight: 900;
-        font-size: 4.75rem;
-        color: white;
-    }
+  #HOME h1 {
+    font-weight: 900;
+    font-size: 4.75rem;
+    color: white;
+  }
 
-    #HOME .wordCarousel {
-        font-size: 28px;
-        font-weight: 100;
-        font-family: serif;
-        div {
-            overflow: hidden;
-            height: 70px;
-            padding-top: 15px;
-            margin-top: -10px;
-            li {
-                padding: 0 10px;
-                height: 45px;
-                margin-bottom: 45px;
-                display: block;
-            }
-        }
-    }
-
-    #HOME .btn-orange {
-        font-size: 26px;
-    }
-
-    section .sec-bg{
-        width: 100%;
-        height: 85px;
-        background-color: rgba(30, 30, 30, 1);
-        position: absolute;
-    }
-
-    #ABOUT img {
-        margin-top: -40px;
-        width: 200px;
-        height: 335px;
-    } 
-
-    #ABOUT .title-bg{
-        margin-top: 0px;
-        background: linear-gradient(0deg, rgba(30, 30, 30, 1), rgba(24, 125, 233, 0.75));
-        position: absolute;
-        height: 200px;
-        width: 200px;
-        left: 0; 
-        right: 0; 
-        margin-left: auto; 
-        margin-right: auto;
-        border-radius: 50%;
-    }
-
-    #ABOUT p{
-        font-size: 12px;
-    }
-
-      
-    #WORK .card-deck {
-        width: 70% !important;
-    }
-
-    #WORK h3 {
-        writing-mode: vertical-lr;
-        -webkit-text-orientation: upright;
-        text-orientation: upright;
-        -webkit-writing-mode: vertical-lr;
-        font-weight: 500;
-        font-size: 1.25rem;
-    }
-
-    #WORK .card-img-top{
-        width: 100%;
-        height: 50vh;
-        object-fit: cover;
-    }
-
-    #WORK .modal-body h2 {
-        font-weight: 700;
-        font-style: normal;
-        font-size: 3rem;
-        color: var(--work-color);
-    }
-    
-    #WORK .modal-body p {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        color: #FEFEFE;
-    }
-
-    #RESUME .btn-green {
-        font-size: 22px;
-        margin-top: 25px;
-    }
-
-    #RESUME embed {
-        width: 450px;
-        height: 405px;
-    }
-    
-    #CONTACT i {
-        font-size: 55px;
-        margin-top: 45px;
+  #HOME .wordCarousel {
+    font-size: 28px;
+    font-weight: 100;
+    font-family: serif;
+    div {
+      overflow: hidden;
+      height: 70px;
+      padding-top: 15px;
+      margin-top: -10px;
+      li {
+        padding: 0 10px;
+        height: 45px;
         margin-bottom: 45px;
-        margin-left: 20px;
-        margin-right: 20px;
+        display: block;
+      }
     }
-    
-    #CONTACT h6{
-        font-size: 15px;
-        margin: 20px;
-        margin-top: -35px;
-    }
-    
-    #CONTACT h6 a{
-        font-size: 15px;
-        margin-top: -35px;
-    }
+  }
 
-    footer {
-        bottom: 0px;
-        height: 1.5rem; 
-        font-size: 0.55rem;
-        background-color: var(--contact-color);
-    }
+  #HOME .btn-orange {
+    font-size: 26px;
+  }
+
+  section .sec-bg {
+    width: 100%;
+    height: 85px;
+    background-color: rgba(30, 30, 30, 1);
+    position: absolute;
+  }
+
+  #ABOUT img {
+    margin-top: -40px;
+    width: 200px;
+    height: 335px;
+  }
+
+  #ABOUT .title-bg {
+    margin-top: 0px;
+    background: linear-gradient(
+      0deg,
+      rgba(30, 30, 30, 1),
+      rgba(24, 125, 233, 0.75)
+    );
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+  }
+
+  #ABOUT p {
+    font-size: 12px;
+  }
+
+  #WORK .card-deck {
+    width: 70% !important;
+  }
+
+  #WORK h3 {
+    writing-mode: vertical-lr;
+    -webkit-text-orientation: upright;
+    text-orientation: upright;
+    -webkit-writing-mode: vertical-lr;
+    font-weight: 500;
+    font-size: 1.25rem;
+  }
+
+  #WORK .card-img-top {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+  }
+
+  #WORK .modal-body h2 {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3rem;
+    color: var(--work-color);
+  }
+
+  #WORK .modal-body p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    color: #fefefe;
+  }
+
+  #RESUME .btn-green {
+    font-size: 22px;
+    margin-top: 25px;
+  }
+
+  #RESUME embed {
+    width: 450px;
+    height: 405px;
+  }
+
+  #CONTACT i {
+    font-size: 55px;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  #CONTACT h6 {
+    font-size: 15px;
+    margin: 20px;
+    margin-top: -35px;
+  }
+
+  #CONTACT h6 a {
+    font-size: 15px;
+    margin-top: -35px;
+  }
+
+  footer {
+    bottom: 0px;
+    height: 1.5rem;
+    font-size: 0.55rem;
+    background-color: var(--contact-color);
+  }
 }
 
 // Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) { 
-    
-    #navtop {
-        height: 60px;
-    }
+@media (min-width: 1200px) and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  #navtop {
+    height: 60px;
+  }
 
-    #square {
-        height: 62.5px;
-    }
+  #square {
+    height: 62.5px;
+  }
 
-    header .navbar-brand img{
-        width: 75px; 
-        height: 50px;
-        padding: 5px;
-    }
+  header .navbar-brand img {
+    width: 75px;
+    height: 50px;
+    padding: 5px;
+  }
 
-    header .navbar {
-        padding: 0rem 0rem;
-    }
+  header .navbar {
+    padding: 0rem 0rem;
+  }
 
-    header .navbar-nav:last-child {
-        margin-right: 0rem;
-    }
+  header .navbar-nav:last-child {
+    margin-right: 0rem;
+  }
 
-    header .nav-item{
-        font-size: 0.7rem;
-        margin-bottom: 0rem;
-    }
+  header .nav-item {
+    font-size: 0.7rem;
+    margin-bottom: 0rem;
+  }
 
-    header .navbar-brand{
-        margin-left: 1.8rem;
-    }
+  header .navbar-brand {
+    margin-left: 1.8rem;
+  }
 
-    section h1  {
-        font-weight: 700;
-        font-size: 3.0rem;
-    }    
+  section h1 {
+    font-weight: 700;
+    font-size: 3rem;
+  }
 
-    section .title-line {
+  section .title-line {
     height: 0.3rem;
     width: 4rem;
     text-align: center;
     margin: auto;
     margin-bottom: 30px;
     margin-top: 12px;
-    }
+  }
 
-    section {
-        padding-top: 62.5px;
-        padding-bottom: 70px;
-        min-height: 100vh;
-    }
+  section {
+    padding-top: 62.5px;
+    padding-bottom: 70px;
+    min-height: 100vh;
+  }
 
-    #HOME {
-        padding-top: 4.75rem;
-        padding-bottom: 0px;
-        min-height: 100vh; 
-    }
+  #HOME {
+    padding-top: 4.75rem;
+    padding-bottom: 0px;
+    min-height: 100vh;
+  }
 
-    #ABOUT{
-        padding-top: 62.5px;
-        padding-bottom: 0px;
-    }
+  #ABOUT {
+    padding-top: 62.5px;
+    padding-bottom: 0px;
+  }
 
-    #CONTACT{
-        padding-bottom: 30px;
-    }
+  #CONTACT {
+    padding-bottom: 30px;
+  }
 
-    #ABOUT #about-info, #WORK #work-info, #RESUME #resume-info {
-        margin-top: 30px;
-    }
+  #ABOUT #about-info,
+  #WORK #work-info,
+  #RESUME #resume-info {
+    margin-top: 30px;
+  }
 
-    #CONTACT #contact-info {
-        margin-top: 30px;
-    }
+  #CONTACT #contact-info {
+    margin-top: 30px;
+  }
 
-    #HOME .title-line {
-        margin-bottom: 25px;
-        margin-top: 0px;
-        }
+  #HOME .title-line {
+    margin-bottom: 25px;
+    margin-top: 0px;
+  }
 
-    #HOME h1{
-        font-weight: 900;
-        font-size: 4.75rem;
-        color: white;
-    }
+  #HOME h1 {
+    font-weight: 900;
+    font-size: 4.75rem;
+    color: white;
+  }
 
-    #HOME .wordCarousel {
-        font-size: 28px;
-        font-weight: 100;
-        font-family: serif;
-        div {
-            overflow: hidden;
-            height: 70px;
-            padding-top: 15px;
-            margin-top: -10px;
-            li {
-                padding: 0 10px;
-                height: 45px;
-                margin-bottom: 45px;
-                display: block;
-            }
-        }
-    }
-
-    #HOME .btn-orange {
-        font-size: 26px;
-    }
-
-    section .sec-bg{
-        width: 100%;
-        height: 85px;
-        background-color: rgba(30, 30, 30, 1);
-        position: absolute;
-    }
-
-    #ABOUT .title-bg{
-        margin-top: 0px;
-        background: linear-gradient(0deg, rgba(30, 30, 30, 1), rgba(24, 125, 233, 0.75));
-        position: absolute;
-        height: 200px;
-        width: 200px;
-        left: 0; 
-        right: 0; 
-        margin-left: auto; 
-        margin-right: auto;
-        border-radius: 50%;
-    }
-
-    #ABOUT img {
-        margin-top: -30px;
-        width: 210px;
-        height: 350px;
-    } 
-
-    #ABOUT p{
-        font-size: 12px;
-    }
-
-    #WORK h3 {
-        writing-mode: vertical-lr;
-        -webkit-text-orientation: upright;
-        text-orientation: upright;
-        -webkit-writing-mode: vertical-lr;
-        font-weight: 500;
-        font-size: 1.25rem;
-    }
-
-    #WORK .card-img-top{
-        width: 100%;
-        height: 50vh;
-        object-fit: cover;
-    }
-   
-    #WORK .card-deck {
-        width: 70% !important;
-    }
-
-    #WORK .modal-body h2 {
-        font-weight: 700;
-        font-style: normal;
-        font-size: 3rem;
-        color: var(--work-color);
-    }
-    
-    #WORK .modal-body p {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        color: #FEFEFE;
-    }
-
-    #RESUME .btn-green {
-        font-size: 22px;
-        margin-top: 25px;
-    }
-
-    #RESUME embed {
-        width: 450px;
-        height: 425px;
-    }
-    
-    #CONTACT i {
-        font-size: 55px;
-        margin-top: 45px;
+  #HOME .wordCarousel {
+    font-size: 28px;
+    font-weight: 100;
+    font-family: serif;
+    div {
+      overflow: hidden;
+      height: 70px;
+      padding-top: 15px;
+      margin-top: -10px;
+      li {
+        padding: 0 10px;
+        height: 45px;
         margin-bottom: 45px;
-        margin-left: 30px;
-        margin-right: 30px;
+        display: block;
+      }
     }
-    
-    #CONTACT h6{
-        font-size: 15px;
-        margin: 20px;
-        margin-top: -35px;
-    }
-    
-    #CONTACT h6 a{
-        font-size: 15px;
-        margin-top: -35px;
-    }
+  }
 
-    footer {
-        bottom: 0px;
-        height: 1.5rem; 
-        font-size: 0.55rem;
-    }
+  #HOME .btn-orange {
+    font-size: 26px;
+  }
+
+  section .sec-bg {
+    width: 100%;
+    height: 85px;
+    background-color: rgba(30, 30, 30, 1);
+    position: absolute;
+  }
+
+  #ABOUT .title-bg {
+    margin-top: 0px;
+    background: linear-gradient(
+      0deg,
+      rgba(30, 30, 30, 1),
+      rgba(24, 125, 233, 0.75)
+    );
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+  }
+
+  #ABOUT img {
+    margin-top: -30px;
+    width: 210px;
+    height: 350px;
+  }
+
+  #ABOUT p {
+    font-size: 12px;
+  }
+
+  #WORK h3 {
+    writing-mode: vertical-lr;
+    -webkit-text-orientation: upright;
+    text-orientation: upright;
+    -webkit-writing-mode: vertical-lr;
+    font-weight: 500;
+    font-size: 1.25rem;
+  }
+
+  #WORK .card-img-top {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+  }
+
+  #WORK .card-deck {
+    width: 70% !important;
+  }
+
+  #WORK .modal-body h2 {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3rem;
+    color: var(--work-color);
+  }
+
+  #WORK .modal-body p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    color: #fefefe;
+  }
+
+  #RESUME .btn-green {
+    font-size: 22px;
+    margin-top: 25px;
+  }
+
+  #RESUME embed {
+    width: 450px;
+    height: 425px;
+  }
+
+  #CONTACT i {
+    font-size: 55px;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  #CONTACT h6 {
+    font-size: 15px;
+    margin: 20px;
+    margin-top: -35px;
+  }
+
+  #CONTACT h6 a {
+    font-size: 15px;
+    margin-top: -35px;
+  }
+
+  footer {
+    bottom: 0px;
+    height: 1.5rem;
+    font-size: 0.55rem;
+  }
 }
